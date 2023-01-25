@@ -10,8 +10,8 @@
   "include": [
     "apps/document",
     "apps/document/.vitepress",
-    "packages/constants/**/*",
-    "packages/constants/**/*.json",
-    "packages/constants/**/typings/**/*"
+    "packages/**/*",
+    "packages/**/*.json",
+    "packages/**/typings/**/*"
   ]
 }
