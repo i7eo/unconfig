@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "TSConfig Vitest",
+  "extends": "./browser.vue3.json",
+  "compilerOptions": {
+    "types": ["node", "jsdom", "vitest/globals"]
+  }
+}

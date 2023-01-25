@@ -1,0 +1,44 @@
+{
+  "name": "@unconfig/prettier-config",
+  "version": "0.0.0",
+  "description": "🚀 The package offer prettier-config for @unconfig!",
+  "keywords": [
+    "unconfig",
+    "monorepo",
+    "pnpm",
+    "turborepo",
+    "changesets",
+    "prettier",
+    "prettier-config"
+  ],
+  "homepage": "https://github.com/i7eo/unconfig/blob/master/packages/prettier-config#readme",
+  "bugs": {
+    "url": "https://github.com/i7eo/unconfig/issues"
+  },
+  "license": "MIT",
+  "author": "i7eo <admin@i7eo.com> (https://github.com/i7eo)",
+  "files": [
+    "base.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/i7eo/unconfig.git",
+    "directory": "packages/prettier-config"
+  },
+  "scripts": {
+    "clean": "run-p clean:**",
+    "clean:cache": "rimraf .turbo && rimraf dist",
+    "clean:deps": "rimraf node_modules"
+  },
+  "dependencies": {
+    "prettier": "^2.8.3"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^4.1.1"
+  },
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=7"
+  }
+}

@@ -1,0 +1,1 @@
+module.exports = require('@unconfig/simple-git-hooks-config')

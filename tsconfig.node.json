@@ -1,0 +1,25 @@
+{
+  "extends": "@unconfig/ts-config/node.cjs.json",
+  "baseUrl": "./",
+  "paths": {
+    "@unconfig/*": ["packages/*/src"]
+  },
+  "compilerOptions": {
+    "composite": true
+  },
+  "include": [
+    "**/build.config.ts",
+    "**/scripts/**/*",
+    "scripts/**/*",
+    "packages/**/*",
+    "packages/**/*.json",
+    "packages/**/typings/**/*",
+  ],
+  "exclude": [
+    "**/__tests__/**",
+    "**/tests/**",
+    "node_modules",
+    "**/dist",
+    "**/*.md"
+  ]
+}

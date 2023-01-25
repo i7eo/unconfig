@@ -1,0 +1,29 @@
+{
+  "recommendations": [
+    "formulahendry.auto-close-tag",
+    "formulahendry.auto-complete-tag",
+    "steoates.autoimport",
+    "formulahendry.auto-rename-tag",
+    "pranaygp.vscode-css-peek",
+    "mikestead.dotenv",
+    "dbaeumer.vscode-eslint",
+    "antfu.iconify",
+    "wix.vscode-import-cost",
+    "xabikos.javascriptsnippets",
+    "akamud.vscode-javascript-snippet-pack",
+    "obkoro1.korofileheader",
+    "mrmlnc.vscode-less",
+    "DavidAnson.vscode-markdownlint",
+    "leizongmin.node-module-intellisense",
+    "christian-kohler.path-intellisense",
+    "esbenp.prettier-vscode",
+    "mohsen1.prettify-json",
+    "2gua.rainbow-brackets",
+    "mrmlnc.vscode-scss",
+    "stylelint.vscode-stylelint",
+    "Vue.volar",
+    "Vue.vscode-typescript-vue-plugin",
+    "misterj.vue-volar-extention-pack",
+    "sdras.vue-vscode-snippets"
+  ]
+}

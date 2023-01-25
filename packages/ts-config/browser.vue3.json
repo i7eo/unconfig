@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "TSConfig Browser Vue3",
+  "extends": "./base.json",
+  "vueCompilerOptions": {
+    "target": 3
+  }
+}

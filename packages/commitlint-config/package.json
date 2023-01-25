@@ -1,0 +1,47 @@
+{
+  "name": "@unconfig/commitlint-config",
+  "version": "0.0.0",
+  "description": "🚀 The package offer commitlint-config for @unconfig!",
+  "keywords": [
+    "unconfig",
+    "monorepo",
+    "pnpm",
+    "turborepo",
+    "changesets",
+    "commitlint",
+    "commitlint-config"
+  ],
+  "homepage": "https://github.com/i7eo/unconfig/blob/master/packages/commitlint-config#readme",
+  "bugs": {
+    "url": "https://github.com/i7eo/unconfig/issues"
+  },
+  "license": "MIT",
+  "author": "i7eo <admin@i7eo.com> (https://github.com/i7eo)",
+  "files": [
+    "base.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/i7eo/unconfig.git",
+    "directory": "packages/commitlint-config"
+  },
+  "scripts": {
+    "clean": "run-p clean:**",
+    "clean:cache": "rimraf .turbo && rimraf dist",
+    "clean:deps": "rimraf node_modules"
+  },
+  "dependencies": {
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
+    "@types/node": "*",
+    "czg": "^1.4.1"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^4.1.1"
+  },
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=7"
+  }
+}

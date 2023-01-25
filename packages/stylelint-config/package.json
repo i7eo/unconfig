@@ -1,0 +1,56 @@
+{
+  "name": "@unconfig/stylelint-config",
+  "version": "0.0.0",
+  "description": "🚀 The package offer stylelint-config for @unconfig!",
+  "keywords": [
+    "unconfig",
+    "monorepo",
+    "pnpm",
+    "turborepo",
+    "changesets",
+    "stylelint",
+    "stylelint-config"
+  ],
+  "homepage": "https://github.com/i7eo/unconfig/blob/master/packages/stylelint-config#readme",
+  "bugs": {
+    "url": "https://github.com/i7eo/unconfig/issues"
+  },
+  "license": "MIT",
+  "author": "i7eo <admin@i7eo.com> (https://github.com/i7eo)",
+  "files": [
+    "base.js",
+    "vue3.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/i7eo/unconfig.git",
+    "directory": "packages/stylelint-config"
+  },
+  "scripts": {
+    "clean": "run-p clean:**",
+    "clean:cache": "rimraf .turbo && rimraf dist",
+    "clean:deps": "rimraf node_modules"
+  },
+  "peerDependencies": {
+    "stylelint": "^14.16.1"
+  },
+  "dependencies": {
+    "postcss": "^8.4.21",
+    "postcss-html": "^1.5.0",
+    "postcss-less": "^6.0.0",
+    "stylelint": "^14.16.1",
+    "stylelint-config-prettier": "^9.0.4",
+    "stylelint-config-recommended": "^9.0.0",
+    "stylelint-config-recommended-vue": "^1.4.0",
+    "stylelint-config-standard": "^29.0.0",
+    "stylelint-order": "^6.0.1"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^4.1.1"
+  },
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=7"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "extends": "@unconfig/ts-config/document.vitepress.json",
+  "baseUrl": "./",
+  "paths": {
+    "@unconfig/*": ["packages/*/src"]
+  },
+  "compilerOptions": {
+    "composite": true
+  },
+  "include": [
+    "apps/document",
+    "apps/document/.vitepress",
+    "packages/constants/**/*",
+    "packages/constants/**/*.json",
+    "packages/constants/**/typings/**/*"
+  ]
+}
