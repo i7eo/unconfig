@@ -1,10 +1,10 @@
 {
   "extends": "@unconfig/ts-config/document.vitepress.json",
-  "baseUrl": "./",
-  "paths": {
-    "@unconfig/*": ["packages/*/src"]
-  },
   "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@unconfig/*": ["packages/*/src"]
+    },
     "composite": true
   },
   "include": [
