@@ -30,14 +30,14 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
           cache: pnpm
 
       - name: Install Dependencies
         run: pnpm install --no-frozen-lockfile
 
-      # - name: Build Packages
-      #   run: pnpm build
+      - name: Build Packages
+        run: pnpm build
 
       - name: Fetch Github User Email
         run: git config --global user.email $(git log -n 1 --pretty=format:%ae)

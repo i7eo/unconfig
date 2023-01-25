@@ -2,7 +2,7 @@
   "name": "unconfig-monorepo",
   "private": true,
   "packageManager": "pnpm@7.25.0",
-  "description": "🚀 A modern, high-performance monorepo project designed all config!",
+  "description": "🚀 A modern, high-performance monorepo project built to simplify project config!",
   "keywords": [
     "unconfig",
     "monorepo",
