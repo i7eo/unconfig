@@ -237,7 +237,7 @@ importers:
       rimraf: ^4.1.1
       stylelint: ^14.16.1
       stylelint-config-prettier: ^9.0.4
-      stylelint-config-recommended: ^9.0.0
+      stylelint-config-recommended: ^10.0.1
       stylelint-config-recommended-vue: ^1.4.0
       stylelint-config-standard: ^29.0.0
       stylelint-order: ^6.0.1
@@ -247,7 +247,7 @@ importers:
       postcss-less: 6.0.0_postcss@8.4.21
       stylelint: 14.16.1
       stylelint-config-prettier: 9.0.4_stylelint@14.16.1
-      stylelint-config-recommended: 9.0.0_stylelint@14.16.1
+      stylelint-config-recommended: 10.0.1_stylelint@14.16.1
       stylelint-config-recommended-vue: 1.4.0_kbto3rg3njmczth2rrsgfnlsqa
       stylelint-config-standard: 29.0.0_stylelint@14.16.1
       stylelint-order: 6.0.1_stylelint@14.16.1
@@ -6400,7 +6400,15 @@ packages:
       semver: 7.3.8
       stylelint: 14.16.1
       stylelint-config-html: 1.1.0_kbto3rg3njmczth2rrsgfnlsqa
-      stylelint-config-recommended: 9.0.0_stylelint@14.16.1
+      stylelint-config-recommended: 10.0.1_stylelint@14.16.1
+    dev: false
+
+  /stylelint-config-recommended/10.0.1_stylelint@14.16.1:
+    resolution: {integrity: sha512-TQ4xQ48tW4QSlODcti7pgSRqBZcUaBzuh0jPpfiMhwJKBPkqzTIAU+IrSWL/7BgXlOM90DjB7YaNgFpx8QWhuA==}
+    peerDependencies:
+      stylelint: ^15.0.0
+    dependencies:
+      stylelint: 14.16.1
     dev: false
 
   /stylelint-config-recommended/9.0.0_stylelint@14.16.1:
