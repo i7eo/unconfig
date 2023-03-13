@@ -30,6 +30,9 @@
     "clean:cache": "rimraf .turbo && rimraf dist",
     "clean:deps": "rimraf node_modules"
   },
+  "peerDependencies": {
+    "simple-git-hooks": "^2.8.1"
+  },
   "dependencies": {
     "simple-git-hooks": "^2.8.1"
   },

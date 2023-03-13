@@ -31,8 +31,11 @@
     "clean:cache": "rimraf .turbo && rimraf dist",
     "clean:deps": "rimraf node_modules"
   },
+  "peerDependencies": {
+    "lint-staged": "^13.2.0"
+  },
   "dependencies": {
-    "lint-staged": "^13.1.0"
+    "lint-staged": "^13.2.0"
   },
   "devDependencies": {
     "npm-run-all": "^4.1.5",

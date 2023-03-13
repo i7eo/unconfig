@@ -1,10 +1,13 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "TSConfig Dcoument Vitepress",
-  "extends": "./browser.vue3.json",
+  "extends": "./base.json",
   "compilerOptions": {
     "lib": ["ESNext", "WebWorker"],
     "jsx": "preserve",
     "declaration": true
+  },
+  "vueCompilerOptions": {
+    "target": 3
   }
 }

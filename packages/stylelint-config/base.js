@@ -1,7 +1,7 @@
 module.exports = {
   plugins: ['stylelint-order'],
   customSyntax: 'postcss-html',
-  extends: ['stylelint-config-standard', 'stylelint-config-prettier'],
+  extends: ['stylelint-config-standard'],
   rules: {
     'selector-class-pattern': null,
     'selector-pseudo-class-no-unknown': [

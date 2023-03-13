@@ -32,18 +32,16 @@
     "clean:deps": "rimraf node_modules"
   },
   "peerDependencies": {
-    "stylelint": "^14.16.1"
+    "stylelint": "^15.2.0"
   },
   "dependencies": {
     "postcss": "^8.4.21",
     "postcss-html": "^1.5.0",
-    "postcss-less": "^6.0.0",
-    "stylelint": "^14.16.1",
-    "stylelint-config-prettier": "^9.0.4",
-    "stylelint-config-recommended": "^9.0.0",
+    "stylelint": "^15.2.0",
+    "stylelint-config-recommended": "^10.0.1",
     "stylelint-config-recommended-vue": "^1.4.0",
-    "stylelint-config-standard": "^29.0.0",
-    "stylelint-order": "^6.0.1"
+    "stylelint-config-standard": "^30.0.1",
+    "stylelint-order": "^6.0.3"
   },
   "devDependencies": {
     "npm-run-all": "^4.1.5",
