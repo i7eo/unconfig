@@ -1,5 +1,11 @@
 # @unconfig/ts-config
 
+## 0.1.2
+
+### Patch Changes
+
+- [`edbfc31`](https://github.com/i7eo/unconfig/commit/edbfc3188acfc63f0979b7e0679afba70d04c9df) - export vitest.vue3.json
+
 ## 0.1.1
 
 ### Patch Changes
