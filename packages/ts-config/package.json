@@ -25,7 +25,8 @@
     "node.cjs.json",
     "node.esm.json",
     "vite.json",
-    "vitest.json"
+    "vitest.json",
+    "vitest.vue3.json"
   ],
   "repository": {
     "type": "git",
