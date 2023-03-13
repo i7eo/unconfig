@@ -1,6 +1,6 @@
 {
   "name": "@unconfig/stylelint-config",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "🚀 The package offer stylelint-config for @unconfig!",
   "keywords": [
     "unconfig",
