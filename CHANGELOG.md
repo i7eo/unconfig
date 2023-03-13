@@ -10,6 +10,37 @@ section: 'introduction'
 
 <!-- CHANGELOG:INSERT -->
 
+## 13-03-2023
+
+**@unconfig/ts-config** `v0.1.1`
+
+- update deps version and refactor tsconfig
+
+**@unconfig/eslint-config** `v0.1.1`
+
+- update deps version and refactor tsconfig
+
+**@unconfig/prettier-config** `v0.1.1`
+
+- update deps version and refactor tsconfig
+
+**@unconfig/stylelint-config** `v0.1.1`
+
+- update deps version and refactor tsconfig
+
+**@unconfig/commitlint-config** `v0.1.1`
+
+- update deps version and refactor tsconfig
+
+**@unconfig/lint-staged-config** `v0.1.1`
+
+- update deps version and refactor tsconfig
+
+**@unconfig/simple-git-hooks-config** `v0.1.1`
+
+- update deps version and refactor tsconfig
+
+
 ## 25-01-2023
 
 **@unconfig/ts-config** `v0.1.0`
