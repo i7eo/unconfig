@@ -10,6 +10,13 @@ section: 'introduction'
 
 <!-- CHANGELOG:INSERT -->
 
+## 14-03-2023
+
+**@unconfig/ts-config** `v0.1.3`
+
+- add isolatedModules limit
+
+
 ## 13-03-2023
 
 **@unconfig/ts-config** `v0.1.2`
