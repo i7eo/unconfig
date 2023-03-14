@@ -1,5 +1,11 @@
 # @unconfig/ts-config
 
+## 0.1.3
+
+### Patch Changes
+
+- [`76bafe7`](https://github.com/i7eo/unconfig/commit/76bafe7847e01ee31f2fe0d314d081f013cbb2a3) - add isolatedModules limit
+
 ## 0.1.2
 
 ### Patch Changes
