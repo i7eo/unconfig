@@ -25,13 +25,13 @@
     "vue": "^3.2.45"
   },
   "dependencies": {
-    "@docsearch/css": "^3.3.2",
-    "@docsearch/js": "^3.3.2",
-    "@docsearch/react": "^3.3.2",
+    "@docsearch/css": "^3.3.3",
+    "@docsearch/js": "^3.3.3",
+    "@docsearch/react": "^3.3.3",
     "@types/markdown-it": "^12.2.3",
     "@types/nprogress": "^0.2.0",
-    "@unocss/preset-wind": "^0.48.4",
-    "@unocss/reset": "^0.48.4",
+    "@unocss/preset-wind": "^0.50.4",
+    "@unocss/reset": "^0.50.4",
     "clipboard-copy": "^4.0.1",
     "escape-html": "^1.0.3",
     "markdown-it": "^13.0.1",
@@ -39,9 +39,9 @@
     "normalize.css": "^8.0.1",
     "nprogress": "^0.2.0",
     "prism-theme-vars": "^0.2.4",
-    "shiki": "^0.12.1",
-    "unocss": "^0.48.4",
-    "vue": "^3.2.45",
+    "shiki": "^0.14.1",
+    "unocss": "^0.50.4",
+    "vue": "^3.2.47",
     "@jridgewell/sourcemap-codec": "^1.4.14"
   },
   "devDependencies": {
@@ -51,12 +51,12 @@
     "chalk": "^5.2.0",
     "consola": "^2.15.3",
     "fast-glob": "^3.2.12",
-    "typescript": "^4.9.4",
-    "vite": "^4.0.4",
-    "vitepress": "^1.0.0-alpha.40"
+    "typescript": "^4.9.5",
+    "vite": "^4.1.4",
+    "vitepress": "^1.0.0-alpha.60"
   },
   "engines": {
     "node": ">=18",
-    "pnpm": ">=7"
+    "pnpm": ">=7.29.1"
   }
 }
