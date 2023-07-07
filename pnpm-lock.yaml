@@ -85,7 +85,7 @@ importers:
       '@vitejs/plugin-vue-jsx': ^3.0.0
       chalk: ^5.2.0
       clipboard-copy: ^4.0.1
-      consola: ^2.15.3
+      consola: ^3.2.3
       escape-html: ^1.0.3
       fast-glob: ^3.2.12
       markdown-it: ^13.0.1
@@ -123,7 +123,7 @@ importers:
       '@vitejs/plugin-vue': 4.0.0_vite@4.0.4+vue@3.2.45
       '@vitejs/plugin-vue-jsx': 3.0.0_vite@4.0.4+vue@3.2.45
       chalk: 5.2.0
-      consola: 2.15.3
+      consola: 3.2.3
       fast-glob: 3.2.12
       typescript: 4.9.4
       vite: 4.0.4_@types+node@18.11.18
@@ -2969,6 +2969,12 @@ packages:
 
   /consola/2.15.3:
     resolution: {integrity: sha512-9vAdYbHj6x2fLKC4+oPH0kFzY/orMZyG2Aj+kNylHxKGJ/Ed4dpNyAQYwJOdqO4zdM7XpVHmyejQDcQHrnuXbw==}
+    dev: false
+
+  /consola/3.2.3:
+    resolution: {integrity: sha512-I5qxpzLv+sJhTVEoLYNcTW+bThDCPsit0vLNKShZx6rLtpilNpmmeTPaeqJb9ZE9dV3DGaeby6Vuhrw38WjeyQ==}
+    engines: {node: ^14.18.0 || >=16.10.0}
+    dev: true
 
   /conventional-changelog-angular/5.0.13:
     resolution: {integrity: sha512-i/gipMxs7s8L/QeuavPF2hLnJgH6pEZAttySB6aiQLWcX3puWDL3ACVmvBhJGxnAy52Qc15ua26BufY6KpmrVA==}
