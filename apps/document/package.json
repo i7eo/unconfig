@@ -25,13 +25,13 @@
     "vue": "^3.2.45"
   },
   "dependencies": {
-    "@docsearch/css": "^3.3.2",
-    "@docsearch/js": "^3.3.2",
-    "@docsearch/react": "^3.3.2",
+    "@docsearch/css": "^3.5.1",
+    "@docsearch/js": "^3.5.1",
+    "@docsearch/react": "^3.5.1",
     "@types/markdown-it": "^12.2.3",
     "@types/nprogress": "^0.2.0",
-    "@unocss/preset-wind": "^0.48.4",
-    "@unocss/reset": "^0.48.4",
+    "@unocss/preset-wind": "^0.53.5",
+    "@unocss/reset": "^0.53.5",
     "clipboard-copy": "^4.0.1",
     "escape-html": "^1.0.3",
     "markdown-it": "^13.0.1",
@@ -39,24 +39,24 @@
     "normalize.css": "^8.0.1",
     "nprogress": "^0.2.0",
     "prism-theme-vars": "^0.2.4",
-    "shiki": "^0.12.1",
-    "unocss": "^0.48.4",
-    "vue": "^3.2.45",
-    "@jridgewell/sourcemap-codec": "^1.4.14"
+    "shiki": "^0.14.3",
+    "unocss": "^0.53.5",
+    "vue": "^3.3.4",
+    "@jridgewell/sourcemap-codec": "^1.4.15"
   },
   "devDependencies": {
     "@types/node": "*",
-    "@vitejs/plugin-vue": "^4.0.0",
-    "@vitejs/plugin-vue-jsx": "^3.0.0",
-    "chalk": "^5.2.0",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vitejs/plugin-vue-jsx": "^3.0.1",
+    "chalk": "^5.3.0",
     "consola": "^2.15.3",
-    "fast-glob": "^3.2.12",
-    "typescript": "^4.9.4",
-    "vite": "^4.0.4",
-    "vitepress": "^1.0.0-alpha.40"
+    "fast-glob": "^3.3.0",
+    "typescript": "^4.9.5",
+    "vite": "^4.4.2",
+    "vitepress": "^1.0.0-beta.5"
   },
   "engines": {
     "node": ">=18",
-    "pnpm": ">=7"
+    "pnpm": ">=7.33.3"
   }
 }
