@@ -110,6 +110,8 @@ export async function changesetsGenerateReleases(
   const octokit = new Octokit({
     auth: `token ${env.GITHUB_TOKEN}`,
   })
+  // eslint-disable-next-line no-console
+  console.log('Github Action Env:', JSON.stringify(env))
 
   // Run changesets publish first and get stdout
   const publishCommandOutput = execSync('pnpm changeset publish').toString()

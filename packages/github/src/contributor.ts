@@ -124,17 +124,16 @@ async function main() {
 
   if (!isDistExist) await mkdir(resolve(__dirname, '../dist'))
 
-  // console.log(
-  //   '[@unconfig/github] contributor.ts: process.env',
-  //   process.env.GITHUB_TOKEN,
-  // )
+  // eslint-disable-next-line no-console
+  console.log('Github Action Env:', JSON.stringify(process.env))
   if (process.env.DEV) {
     contributors = {}
   } else {
     if (!process.env.GITHUB_TOKEN) throw new Error('GITHUB_TOKEN is empty')
     try {
       contributors = await getContributors()
-    } catch {
+    } catch (error: any) {
+      console.warn('[@unconfig/github] contributor.ts:', error)
       contributors = {}
     }
   }

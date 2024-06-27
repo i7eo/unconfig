@@ -51,8 +51,7 @@
     "changelog:gen": "tsx ./scripts/changesets/changelog-generate.cts",
     "changelog:write": "tsx ./scripts/changesets/changelog-write.cts",
     "changeset:publish": "tsx ./scripts/changesets/generate-releases.cts $GITHUB_TOKEN $GITHUB_BRANCH",
-    "changeset:gen": "changeset",
-    "test1": "tsx ./test1.ts $NPM_TOKEN $GITHUB_TOKEN $GITHUB_BRANCH"
+    "changeset:gen": "changeset"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.5.0",
