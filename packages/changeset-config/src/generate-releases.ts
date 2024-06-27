@@ -45,14 +45,22 @@ async function createRelease(
     semver.prerelease(tagName.replace(`${pkg.packageJson.name}@`, '')) || []
 
   // Create release on github
-  await octokit.request('POST /repos/{owner}/{repo}/releases', {
-    owner: repoOwner,
-    repo: repoName,
-    name: tagName,
-    tag_name: tagName,
-    body: releaseNotes.join('\n'),
-    prerelease: prereleaseParts.length > 0,
-  })
+  try {
+    const params = {
+      owner: repoOwner,
+      repo: repoName,
+      name: tagName,
+      tag_name: tagName,
+      body: releaseNotes.join('\n'),
+      prerelease: prereleaseParts.length > 0,
+    }
+    await octokit.request('POST /repos/{owner}/{repo}/releases', params)
+  } catch (error: any) {
+    console.warn(
+      "[octokit 'POST /repos/{owner}/{repo}/releases'] has error.",
+      error,
+    )
+  }
 }
 
 // Get only packages that have a new version published
