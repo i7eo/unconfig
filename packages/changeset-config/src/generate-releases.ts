@@ -14,7 +14,7 @@ import {
 
 // Create release on github
 async function createRelease(
-  octokit: any,
+  octokit: InstanceType<typeof Octokit>,
   {
     pkg,
     tagName,
@@ -45,7 +45,7 @@ async function createRelease(
     semver.prerelease(tagName.replace(`${pkg.packageJson.name}@`, '')) || []
 
   // Create release on github
-  await octokit.rest.repos.createRelease({
+  await octokit.request('POST /repos/{owner}/{repo}/releases', {
     owner: repoOwner,
     repo: repoName,
     name: tagName,
@@ -108,7 +108,7 @@ export async function changesetsGenerateReleases(
   // use octokit connect github
   const env = process.env
   const octokit = new Octokit({
-    auth: `token ${env.GITHUB_TOKEN}`,
+    auth: env.GITHUB_TOKEN,
   })
 
   // Run changesets publish first and get stdout
