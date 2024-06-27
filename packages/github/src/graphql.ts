@@ -2,7 +2,7 @@ import process from 'node:process'
 import { Octokit } from '@octokit/core'
 
 export const githubApi: InstanceType<typeof Octokit> = new Octokit({
-  auth: process.env.TOKEN,
+  auth: process.env.GITHUB_TOKEN,
 })
 
 export const GITHUB_DEFAULT_NAMES = ['i7eo']
