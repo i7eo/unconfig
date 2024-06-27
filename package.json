@@ -49,7 +49,7 @@
     "prerelease": "tsx ./scripts/changesets/manual-generate-prereleases.cts",
     "changelog:gen": "tsx ./scripts/changesets/changelog-generate.cts",
     "changelog:write": "tsx ./scripts/changesets/changelog-write.cts",
-    "changeset:publish": "tsx ./scripts/changesets/generate-releases.cts",
+    "changeset:publish": "GITHUB_TOKEN=$GITHUB_TOKEN node --import tsx/esm ./scripts/changesets/generate-releases.cts",
     "changeset:gen": "changeset"
   },
   "devDependencies": {

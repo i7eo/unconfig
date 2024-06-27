@@ -147,5 +147,6 @@ export async function changesetsGenerateReleases(
       projectChangelogPath,
     })
   }
+  // eslint-disable-next-line no-console
   console.log(`🚀🚀🚀 Create release for each published package. 🚀🚀🚀`)
 }
