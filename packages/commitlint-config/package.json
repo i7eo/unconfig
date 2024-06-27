@@ -11,22 +11,49 @@
     "commitlint",
     "commitlint-config"
   ],
+  "license": "MIT",
   "homepage": "https://github.com/i7eo/unconfig/blob/master/packages/commitlint-config#readme",
   "bugs": {
     "url": "https://github.com/i7eo/unconfig/issues"
   },
-  "license": "MIT",
-  "author": "i7eo <admin@i7eo.com> (https://github.com/i7eo)",
-  "files": [
-    "base.js"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/i7eo/unconfig.git",
     "directory": "packages/commitlint-config"
   },
+  "author": "i7eo <admin@i7eo.com> (https://github.com/i7eo)",
+  "files": [
+    "*.d.ts",
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./*": [
+      "./*",
+      "./*.d.ts"
+    ]
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./*"
+      ]
+    }
+  },
   "scripts": {
-    "clean": "run-p clean:**",
+    "build": "tsup",
+    "dev": "DEV=true pnpm build",
+    "test": "vitest",
+    "lint": "run-s \"lint:**\"",
+    "lint:prettier": "prettier . --write",
+    "clean": "run-s \"clean:**\"",
     "clean:cache": "rimraf .turbo && rimraf dist",
     "clean:deps": "rimraf node_modules"
   },
@@ -35,17 +62,16 @@
     "@commitlint/config-conventional": "^17.4.4"
   },
   "dependencies": {
-    "@commitlint/cli": "^17.4.4",
-    "@commitlint/config-conventional": "^17.4.4",
-    "@types/node": "*",
-    "czg": "^1.6.0"
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@commitlint/types": "^19.0.3",
+    "czg": "^1.9.3"
   },
   "devDependencies": {
-    "npm-run-all": "^4.1.5",
-    "rimraf": "^4.1.1"
+    "tsup": "^8.1.0"
   },
   "engines": {
-    "node": ">=18",
-    "pnpm": ">=7"
+    "node": ">=20",
+    "pnpm": ">=9"
   }
 }

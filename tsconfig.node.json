@@ -1,19 +1,15 @@
 {
-  "extends": "@unconfig/ts-config/node.cjs.json",
+  "extends": ["@unconfig/ts-config/node.json", "./tsconfig.paths.json"],
   "compilerOptions": {
-    "baseUrl": "./",
-    "paths": {
-      "@unconfig/*": ["packages/*/src"]
-    },
-    "composite": true
+    "composite": true,
+    "outDir": "dist"
   },
   "include": [
-    "**/build.config.ts",
-    "**/scripts/**/*",
-    "scripts/**/*",
-    "packages/**/*",
-    "packages/**/*.json",
-    "packages/**/typings/**/*"
+    "./packages/**/*",
+    "./packages/**/*.json",
+    "./packages/**/typings/**/*",
+    "./scripts/**/*",
+    "**/*.config.*"
   ],
   "exclude": [
     "**/__tests__/**",

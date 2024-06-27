@@ -1,7 +1,6 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
   "display": "TSConfig Vitest",
-  "extends": "./base.json",
+  "extends": "./web.json",
   "compilerOptions": {
     "types": ["node", "jsdom", "vitest/globals"],
     "skipLibCheck": true

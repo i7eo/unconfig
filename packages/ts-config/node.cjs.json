@@ -1,9 +1,0 @@
-{
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "TSConfig Node CJS",
-  "extends": "./base.json",
-  "compilerOptions": {
-    "module": "commonjs",
-    "types": ["node"]
-  }
-}

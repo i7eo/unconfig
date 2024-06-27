@@ -1,7 +1,1 @@
 * text=auto eol=lf
-*.css linguist-detectable=false
-*.scss linguist-detectable=false
-*.less linguist-detectable=false
-*.ts linguist-detectable=true
-*.tsx linguist-detectable=ts
-*.js linguist-detectable=ts

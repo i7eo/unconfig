@@ -9,7 +9,7 @@
   "commit": false,
   "fixed": [],
   "linked": [],
-  "ignore": ["@unconfig/document"],
+  "ignore": [],
   "access": "public",
   "baseBranch": "master",
   "updateInternalDependencies": "patch",

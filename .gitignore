@@ -18,7 +18,8 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-
+.pnpm-store
+pnpm-lock.yaml
 # Logs
 logs
 *.log
@@ -31,3 +32,6 @@ dist
 *.local
 # .eslintcache
 tmp
+
+# vitepress
+apps/document/.vitepress/cache

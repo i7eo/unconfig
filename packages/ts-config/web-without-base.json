@@ -1,0 +1,9 @@
+{
+  "display": "TSConfig Web Without Base",
+  "compilerOptions": {
+    "jsx": "preserve",
+    "allowJs": true,
+
+    "lib": ["esnext", "dom", "dom.iterable"]
+  }
+}

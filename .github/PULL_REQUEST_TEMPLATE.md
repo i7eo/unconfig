@@ -11,9 +11,12 @@ Please describe the purpose of your pull request here. What do you want to add? 
 
 ## PR Checklist
 
+- [ ] Bug fix
+- [ ] New Feature
+- [ ] Documentation update
+- [ ] Other
+
+## PR Tip
+
 - [ ] I have read the relevant `readme.md` file(s)
-- [ ] Tests are added/updated/not required
-- [ ] Tests are passing
-- [ ] Storybook stories are added/updated/not required
-- [ ] Usage notes are added/updated/not required
 - [ ] Doesn't contain any sensitive information

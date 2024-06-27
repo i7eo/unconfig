@@ -11,23 +11,49 @@
     "lint-staged",
     "lint-staged-config"
   ],
+  "license": "MIT",
   "homepage": "https://github.com/i7eo/unconfig/blob/master/packages/lint-staged-config#readme",
   "bugs": {
     "url": "https://github.com/i7eo/unconfig/issues"
   },
-  "license": "MIT",
-  "author": "i7eo <admin@i7eo.com> (https://github.com/i7eo)",
-  "files": [
-    "base.js",
-    "vue3.js"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/i7eo/unconfig.git",
     "directory": "packages/lint-staged-config"
   },
+  "author": "i7eo <admin@i7eo.com> (https://github.com/i7eo)",
+  "files": [
+    "*.d.ts",
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./*": [
+      "./*",
+      "./*.d.ts"
+    ]
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./*"
+      ]
+    }
+  },
   "scripts": {
-    "clean": "run-p clean:**",
+    "build": "tsup",
+    "dev": "DEV=true pnpm build",
+    "test": "vitest",
+    "lint": "run-s \"lint:**\"",
+    "lint:prettier": "prettier . --write",
+    "clean": "run-s \"clean:**\"",
     "clean:cache": "rimraf .turbo && rimraf dist",
     "clean:deps": "rimraf node_modules"
   },
@@ -35,14 +61,13 @@
     "lint-staged": "^13.2.0"
   },
   "dependencies": {
-    "lint-staged": "^13.2.0"
+    "lint-staged": "^15.2.7"
   },
   "devDependencies": {
-    "npm-run-all": "^4.1.5",
-    "rimraf": "^4.1.1"
+    "tsup": "^8.1.0"
   },
   "engines": {
-    "node": ">=18",
-    "pnpm": ">=7"
+    "node": ">=20",
+    "pnpm": ">=9"
   }
 }

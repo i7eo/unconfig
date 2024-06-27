@@ -1,0 +1,84 @@
+{
+  "name": "@unconfig/changeset-config",
+  "version": "0.1.0",
+  "description": "🚀 The package offer changeset-config for @unconfig!",
+  "keywords": [
+    "unconfig",
+    "monorepo",
+    "pnpm",
+    "turborepo",
+    "changesets",
+    "changeset",
+    "changeset-config"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/i7eo/unconfig/blob/master/packages/changeset-config#readme",
+  "bugs": {
+    "url": "https://github.com/i7eo/unconfig/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/i7eo/unconfig.git",
+    "directory": "packages/changeset-config"
+  },
+  "author": "i7eo <admin@i7eo.com> (https://github.com/i7eo)",
+  "files": [
+    "*.d.ts",
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./*": [
+      "./*",
+      "./*.d.ts"
+    ]
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./*"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "DEV=true pnpm build",
+    "test": "vitest",
+    "lint": "run-s \"lint:**\"",
+    "lint:prettier": "prettier . --write",
+    "clean": "run-s \"clean:**\"",
+    "clean:cache": "rimraf .turbo && rimraf dist",
+    "clean:deps": "rimraf node_modules"
+  },
+  "dependencies": {
+    "@changesets/assemble-release-plan": "^6.0.2",
+    "@changesets/cli": "^2.27.6",
+    "@changesets/config": "^3.0.1",
+    "@changesets/pre": "^2.0.0",
+    "@changesets/read": "^0.6.0",
+    "@changesets/types": "^6.0.0",
+    "@manypkg/get-packages": "^1.1.3",
+    "@octokit/core": "^6.1.2",
+    "@types/inquirer": "^9.0.7",
+    "@types/semver": "^7.5.8",
+    "@unconfig/meta": "workspace:*",
+    "changesets-format-with-issue-links": "^0.3.0",
+    "inquirer": "^9.2.23",
+    "prettier": "^3.3.2",
+    "semver": "^7.6.2"
+  },
+  "devDependencies": {
+    "tsup": "^8.1.0"
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  }
+}

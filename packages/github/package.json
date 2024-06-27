@@ -1,0 +1,70 @@
+{
+  "name": "@unconfig/github",
+  "version": "0.1.0",
+  "description": "🚀 The package offer github for unconfig!",
+  "keywords": [
+    "monorepo",
+    "pnpm",
+    "turborepo",
+    "changesets",
+    "vite",
+    "vue",
+    "github"
+  ],
+  "license": "MIT",
+  "author": "i7eo",
+  "files": [
+    "*.d.ts",
+    "dist"
+  ],
+  "main": "./src/index.ts",
+  "module": "./src/index.ts",
+  "publishConfig": {
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+      ".": {
+        "require": "./dist/index.cjs",
+        "import": "./dist/index.js"
+      },
+      "./*": [
+        "./*",
+        "./*.d.ts"
+      ]
+    },
+    "typesVersions": {
+      "*": {
+        "*": [
+          "./dist/*",
+          "./*"
+        ]
+      }
+    }
+  },
+  "scripts": {
+    "build": "tsup && tsx ./src/contributor.ts",
+    "dev": "DEV=true pnpm build",
+    "test": "vitest",
+    "lint": "run-s \"lint:**\"",
+    "lint:eslint": "TIMING=1 eslint \"*.{js,jsx,ts,tsx,md,json,jsonc}\" --fix",
+    "lint:prettier": "prettier --write \"*.{js,ts,jsx,tsx,md,json,jsonc}\"",
+    "clean": "run-p \"clean:**\"",
+    "clean:cache": "rimraf .turbo && rimraf dist",
+    "clean:deps": "rimraf node_modules"
+  },
+  "dependencies": {
+    "@octokit/core": "^6.1.2",
+    "@types/lodash-es": "^4.17.12",
+    "@unconfig/meta": "workspace:*",
+    "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "tsup": "^8.1.0",
+    "tsx": "^4.15.7"
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  }
+}

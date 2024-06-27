@@ -11,30 +11,33 @@
     "typescript",
     "ts-config"
   ],
+  "license": "MIT",
   "homepage": "https://github.com/i7eo/unconfig/blob/master/packages/ts-config#readme",
   "bugs": {
     "url": "https://github.com/i7eo/unconfig/issues"
   },
-  "license": "MIT",
-  "author": "i7eo <admin@i7eo.com> (https://github.com/i7eo)",
-  "files": [
-    "base.json",
-    "browser.json",
-    "browser.vue3.json",
-    "document.vitepress.json",
-    "node.cjs.json",
-    "node.esm.json",
-    "vite.json",
-    "vitest.json",
-    "vitest.vue3.json"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/i7eo/unconfig.git",
     "directory": "packages/ts-config"
   },
+  "author": "i7eo <admin@i7eo.com> (https://github.com/i7eo)",
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "base.json",
+    "node-without-base.json",
+    "node.json",
+    "package.json",
+    "vite-without-base.json",
+    "vite.json",
+    "vitest-without-base.json",
+    "vitest.json",
+    "web-without-base.json",
+    "web.json"
+  ],
   "engines": {
-    "node": ">=18",
-    "pnpm": ">=7"
+    "node": ">=20",
+    "pnpm": ">=9"
   }
 }

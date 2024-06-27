@@ -1,0 +1,6 @@
+{
+  "display": "TSConfig Node Without Base",
+  "compilerOptions": {
+    "types": ["node"]
+  }
+}

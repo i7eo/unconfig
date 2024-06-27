@@ -1,0 +1,5 @@
+export const ORG_NAME = 'unconfig'
+export const ORG_ZHCN_NAME = 'unconfig'
+export const ORG_CAMELCASE_NAME = 'Unconfig'
+export const ORG_PASCALCASE_NAME = 'Unconfig'
+export const ORG_URL = 'xxx'

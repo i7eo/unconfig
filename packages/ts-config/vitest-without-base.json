@@ -1,0 +1,6 @@
+{
+  "display": "TSConfig Vitest Without Base",
+  "compilerOptions": {
+    "types": ["node", "jsdom", "vitest/globals"]
+  }
+}
