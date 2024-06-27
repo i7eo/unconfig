@@ -1,6 +1,6 @@
 {
   "name": "@unconfig/simple-git-hooks-config",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "🚀 The package offer simple-git-hooks-config for @unconfig!",
   "keywords": [
     "unconfig",

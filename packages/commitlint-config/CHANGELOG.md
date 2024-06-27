@@ -1,5 +1,12 @@
 # @unconfig/commitlint-config
 
+## 0.1.3
+### Patch Changes
+
+
+
+- [`f71acb9`](https://github.com/i7eo/unconfig/commit/f71acb904d4b792a7122c96c6ae72cc09d45c5a8) Thanks [@i7eo](https://github.com/i7eo)! - bump version
+
 ## 0.1.2
 ### Patch Changes
 
