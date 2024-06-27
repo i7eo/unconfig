@@ -10,6 +10,15 @@ section: 'introduction'
 
 ## 27-06-2024
 
+### 10:17:28 AM
+
+**@unconfig/changeset-config** `v0.1.3`
+
+- fix auto create release logic
+
+
+## 27-06-2024
+
 ### 9:53:32 AM
 
 **@unconfig/github** `v0.1.3`
