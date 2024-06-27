@@ -122,7 +122,7 @@ export async function changesetsGenerateReleases(
   )
 
   // Push updated packages to github with tags
-  const gitPushCommand = `git pull && git add . && git diff --staged --quiet || git commit -m "docs: 📝 add changelogs for $(git rev-parse --short HEAD) [skip ci]" && git push origin ${env.GIT_BRANCH} --follow-tags`
+  const gitPushCommand = `git pull && git add . && git diff --staged --quiet || git commit -m "docs: 📝 add changelogs for $(git rev-parse --short HEAD) [skip ci]" && git push origin master --follow-tags`
   const gitPushCommandOutput = execSync(gitPushCommand).toString()
   // eslint-disable-next-line no-console
   console.log(
