@@ -10,6 +10,15 @@ section: 'introduction'
 
 ## 27-06-2024
 
+### 11:06:30 AM
+
+**@unconfig/changeset-config** `v0.1.7`
+
+- refactor release creator
+
+
+## 27-06-2024
+
 ### 10:38:41 AM
 
 **@unconfig/changeset-config** `v0.1.6`
