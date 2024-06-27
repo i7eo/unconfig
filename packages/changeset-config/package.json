@@ -1,6 +1,6 @@
 {
   "name": "@unconfig/changeset-config",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "🚀 The package offer changeset-config for @unconfig!",
   "keywords": [
     "unconfig",

@@ -1,5 +1,12 @@
 # @unconfig/changeset-config
 
+## 0.1.4
+### Patch Changes
+
+
+
+- [`2e4d47d`](https://github.com/i7eo/unconfig/commit/2e4d47d09694264cae038242b381c601397e1912) Thanks [@i7eo](https://github.com/i7eo)! - add create release log
+
 ## 0.1.3
 ### Patch Changes
 
