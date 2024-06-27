@@ -1,6 +1,6 @@
 {
   "name": "@unconfig/github",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "🚀 The package offer github for unconfig!",
   "keywords": [
     "monorepo",
