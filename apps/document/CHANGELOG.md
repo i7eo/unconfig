@@ -1,5 +1,11 @@
 # @unconfig/document
 
+## 0.1.3
+### Patch Changes
+
+- Updated dependencies [[`613133a`](https://github.com/i7eo/unconfig/commit/613133ab93a9bd17e54a43e61469f071fc2d7783)]:
+  - @unconfig/github@0.1.3
+
 ## 0.1.2
 ### Patch Changes
 
