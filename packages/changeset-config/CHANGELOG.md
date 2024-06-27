@@ -1,5 +1,12 @@
 # @unconfig/changeset-config
 
+## 0.1.3
+### Patch Changes
+
+
+
+- [`8fdeed5`](https://github.com/i7eo/unconfig/commit/8fdeed501c19091cb56087e993de900e34565592) Thanks [@i7eo](https://github.com/i7eo)! - fix auto create release logic
+
 ## 0.1.2
 ### Patch Changes
 
