@@ -110,8 +110,6 @@ export async function changesetsGenerateReleases(
   const octokit = new Octokit({
     auth: `token ${env.GITHUB_TOKEN}`,
   })
-  // eslint-disable-next-line no-console
-  console.log('Github Action Env:', JSON.stringify(env))
 
   // Run changesets publish first and get stdout
   const publishCommandOutput = execSync('pnpm changeset publish').toString()
@@ -124,7 +122,7 @@ export async function changesetsGenerateReleases(
   )
 
   // Push updated packages to github with tags
-  const gitPushCommand = `git pull && git add . && git diff --staged --quiet || git commit -m "docs: 📝 add changelogs for $(git rev-parse --short HEAD) [skip ci]" && git push origin ${env.GIT_BRANCH} --follow-tags`
+  const gitPushCommand = `git pull && git add . && git diff --staged --quiet || git commit -m "docs: 📝 add changelogs for $(git rev-parse --short HEAD) [skip ci]" && git push origin ${env.GITHUB_BRANCH} --follow-tags`
   const gitPushCommandOutput = execSync(gitPushCommand).toString()
   // eslint-disable-next-line no-console
   console.log(

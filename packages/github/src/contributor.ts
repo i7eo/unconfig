@@ -124,8 +124,6 @@ async function main() {
 
   if (!isDistExist) await mkdir(resolve(__dirname, '../dist'))
 
-  // eslint-disable-next-line no-console
-  console.log('Github Action Env:', JSON.stringify(process.env))
   if (process.env.DEV) {
     contributors = {}
   } else {
