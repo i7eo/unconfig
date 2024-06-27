@@ -12,6 +12,15 @@ section: 'introduction'
 
 ## 27-06-2024
 
+### 10:26:45 AM
+
+**@unconfig/changeset-config** `v0.1.4`
+
+- add create release log
+
+
+## 27-06-2024
+
 ### 10:17:28 AM
 
 **@unconfig/changeset-config** `v0.1.3`
