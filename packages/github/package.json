@@ -43,7 +43,7 @@
     }
   },
   "scripts": {
-    "build": "tsup && tsx ./src/contributor.ts",
+    "build": "tsup && GITHUB_TOKEN=$GITHUB_TOKEN node --import tsx/esm ./src/contributor.ts",
     "dev": "DEV=true pnpm build",
     "test": "vitest",
     "lint": "run-s \"lint:**\"",
