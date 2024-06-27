@@ -54,6 +54,8 @@ async function createRelease(
       body: releaseNotes.join('\n'),
       prerelease: prereleaseParts.length > 0,
     }
+    // eslint-disable-next-line no-console
+    console.log(params)
     await octokit.request('POST /repos/{owner}/{repo}/releases', params)
   } catch (error: any) {
     console.warn(
