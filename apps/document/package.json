@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
-    "@unconfig/github": "workspace:*",
+    "@unconfig/github": "latest",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.11",
     "medium-zoom": "^1.1.0",
