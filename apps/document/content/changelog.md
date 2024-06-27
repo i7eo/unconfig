@@ -10,6 +10,15 @@ section: 'introduction'
 
 ## 27-06-2024
 
+### 9:53:32 AM
+
+**@unconfig/github** `v0.1.3`
+
+- add auth
+
+
+## 27-06-2024
+
 ### 9:48:07 AM
 
 **@unconfig/ts-config** `v0.1.5`
