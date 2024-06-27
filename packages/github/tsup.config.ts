@@ -6,7 +6,7 @@ export default defineConfig({
   format: ['esm', 'cjs'],
   // splitting: true, // 暂时不要开启，对某些 cjs module 支持度不够比如 prettier
   cjsInterop: true,
-  watch: !!process.env.DEV,
+  // watch: !!process.env.DEV,
   dts: process.env.DEV
     ? false
     : {

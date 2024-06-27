@@ -81,7 +81,13 @@ function handleVitepressMember(user) {
 }
 
 onMounted(async () => {
-  const result = (await import('@unconfig/github/dist/contributor.json')).default
+  let result = {}
+  try {
+    result = (await import('@unconfig/github/dist/contributor.json')).default
+  }catch {
+    result = {}
+  }
+
   let _members = []
   for(const [name, contributors] of Object.entries(result)) {
     // console.log(name, contributors)

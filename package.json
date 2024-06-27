@@ -33,9 +33,10 @@
     "preinstall": "npx only-allow pnpm",
     "postinstall": "simple-git-hooks",
     "dev": "turbo run dev --parallel --continue",
-    "dev:document": "pnpm build:packages && turbo run dev --filter=\"./apps/document\"",
+    "dev:document": "pnpm build:packages && turbo run dev --filter=\"./packages/github\" && turbo run dev --filter=\"./apps/document\"",
     "build": "turbo run build",
     "build:packages": "turbo run build --filter=\"./packages/**\"",
+    "build:contributor": "pnpm --filter=\"./packages/github\" build:contributor",
     "build:document": "turbo run build --filter=\"./apps/document\"",
     "test": "turbo run test",
     "clean": "run-s \"clean:**\"",
@@ -49,7 +50,7 @@
     "prerelease": "tsx ./scripts/changesets/manual-generate-prereleases.cts",
     "changelog:gen": "tsx ./scripts/changesets/changelog-generate.cts",
     "changelog:write": "tsx ./scripts/changesets/changelog-write.cts",
-    "changeset:publish": "GITHUB_TOKEN=$GITHUB_TOKEN node --import tsx/esm ./scripts/changesets/generate-releases.cts",
+    "changeset:publish": "tsx ./scripts/changesets/generate-releases.cts",
     "changeset:gen": "changeset"
   },
   "devDependencies": {

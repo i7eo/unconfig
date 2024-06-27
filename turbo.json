@@ -9,6 +9,11 @@
       "dependsOn": ["^build"]
     },
 
+    "build:contributor": {
+      "outputs": ["dist/**"],
+      "dependsOn": ["^build"]
+    },
+
     "build:document": {
       "outputs": ["dist/**"],
       "dependsOn": ["build"]

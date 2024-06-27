@@ -45,6 +45,9 @@ jobs:
       - name: Fetch Github User Name
         run: git config --global user.name $(git log -n 1 --pretty=format:%an)
 
+      - name: Setup Contributor
+        run: GITHUB_TOKEN=$GITHUB_TOKEN pnpm build:contributor
+
       - name: Generate changelogrc
         run: pnpm changelog:gen
 
@@ -54,7 +57,7 @@ jobs:
       - name: Publish packages and create releases
         run: |
           npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN
-          pnpm changeset:publish
+          GITHUB_TOKEN=$GITHUB_TOKEN pnpm changeset:publish
 
       - name: Generate changelog files
         run: pnpm changelog:write
