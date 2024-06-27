@@ -1,5 +1,5 @@
 import process from 'node:process'
-import { readdir, writeFile } from 'node:fs/promises'
+import { access, mkdir, readdir, writeFile } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { mapValues, uniqBy } from 'lodash-es'
@@ -17,6 +17,15 @@ const excludeFileNames = ['.DS_Store']
 
 function filterGuard(name: string) {
   return !excludeFileNames.includes(name)
+}
+
+async function pathExists(path: string) {
+  try {
+    await access(path)
+    return true
+  } catch {
+    return false
+  }
 }
 
 async function getPathDirs(pathName: string) {
@@ -111,20 +120,28 @@ async function getContributors() {
 async function main() {
   let contributors: Record<string, ContributorInfo[]> = {}
   const fileName = resolve(__dirname, `../dist/contributor.json`)
+  const isDistExist = await pathExists(resolve(__dirname, '../dist'))
 
-  console.log(
-    '[@unconfig/github] contributor.ts: process.env',
-    process.env.GITHUB_TOKEN,
-  )
+  if (!isDistExist) await mkdir(resolve(__dirname, '../dist'))
+
+  // console.log(
+  //   '[@unconfig/github] contributor.ts: process.env',
+  //   process.env.GITHUB_TOKEN,
+  // )
   if (process.env.DEV) {
     contributors = {}
   } else {
     if (!process.env.GITHUB_TOKEN) throw new Error('GITHUB_TOKEN is empty')
-    contributors = await getContributors()
+    try {
+      contributors = await getContributors()
+    } catch {
+      contributors = {}
+    }
   }
   // contributors = await getContributors()
 
   await writeFile(fileName, JSON.stringify(contributors), 'utf8')
+  // eslint-disable-next-line no-console
   console.log('[@unconfig/github] contributor.ts: Contributors generated')
 }
 

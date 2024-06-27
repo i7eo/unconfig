@@ -15,7 +15,7 @@ export default defineConfig({
         },
       },
   tsconfig: '../../tsconfig.node.json',
-  clean: true,
+  // clean: true,
   shims: true,
   define: {
     'import.meta.DEV': JSON.stringify(!!process.env.DEV),
