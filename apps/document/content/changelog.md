@@ -5,12 +5,53 @@ section: 'introduction'
 ---
 
 <!-- markdownlint-disable MD025 -->
-
 # `@unconfig` all changes
-
 <!-- markdownlint-enable MD025 -->
 
-<!-- ignore-contributor -->
+## 27-06-2024
+
+### 9:26:05 AM
+
+**@unconfig/meta** `v0.1.1`
+
+- refactor every package
+
+**@unconfig/github** `v0.1.1`
+
+- refactor every package
+
+**@unconfig/ts-config** `v0.1.4`
+
+- refactor every package
+
+**@unconfig/eslint-config** `v0.1.2`
+
+- refactor every package
+
+**@unconfig/prettier-config** `v0.1.2`
+
+- refactor every package
+
+**@unconfig/stylelint-config** `v0.1.2`
+
+- refactor every package
+
+**@unconfig/changeset-config** `v0.1.1`
+
+- refactor every package
+
+**@unconfig/commitlint-config** `v0.1.2`
+
+- refactor every package
+
+**@unconfig/lint-staged-config** `v0.1.2`
+
+- refactor every package
+
+**@unconfig/simple-git-hooks-config** `v0.1.2`
+
+- refactor every package
+
 
 ## 14-03-2023
 
@@ -18,11 +59,13 @@ section: 'introduction'
 
 - add isolatedModules limit
 
+
 ## 13-03-2023
 
 **@unconfig/ts-config** `v0.1.2`
 
 - export vitest.vue3.json
+
 
 ## 13-03-2023
 
@@ -53,6 +96,7 @@ section: 'introduction'
 **@unconfig/simple-git-hooks-config** `v0.1.1`
 
 - update deps version and refactor tsconfig
+
 
 ## 25-01-2023
 
@@ -87,3 +131,4 @@ section: 'introduction'
 **@unconfig/commitlint-config** `v0.1.0`
 
 - Setup version 0.1.0
+
