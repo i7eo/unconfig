@@ -12,6 +12,51 @@ section: 'introduction'
 
 ## 27-06-2024
 
+### 9:48:07 AM
+
+**@unconfig/ts-config** `v0.1.5`
+
+- bump version
+
+**@unconfig/stylelint-config** `v0.1.3`
+
+- bump version
+
+**@unconfig/simple-git-hooks-config** `v0.1.3`
+
+- bump version
+
+**@unconfig/prettier-config** `v0.1.3`
+
+- bump version
+
+**@unconfig/meta** `v0.1.2`
+
+- bump version
+
+**@unconfig/lint-staged-config** `v0.1.3`
+
+- bump version
+
+**@unconfig/eslint-config** `v0.1.3`
+
+- bump version
+
+**@unconfig/commitlint-config** `v0.1.3`
+
+- bump version
+
+**@unconfig/github** `v0.1.2`
+
+- bump version
+
+**@unconfig/changeset-config** `v0.1.2`
+
+- bump version
+
+
+## 27-06-2024
+
 ### 9:26:05 AM
 
 **@unconfig/meta** `v0.1.1`
