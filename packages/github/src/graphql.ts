@@ -1,6 +1,5 @@
 import process from 'node:process'
 import { Octokit } from '@octokit/core'
-import { REPO_BRANCH, REPO_NAME, REPO_OWNER } from '@unconfig/meta'
 
 export const githubApi: InstanceType<typeof Octokit> = new Octokit({
   auth: process.env.TOKEN,
@@ -49,8 +48,8 @@ export async function fetchCommits(
   options: FetchCommitsOptions[],
 ): Promise<Record<string, ApiResult>> {
   const query = `{
-    repository(owner: "${REPO_OWNER}", name: "${REPO_NAME}") {
-      object(expression: "${REPO_BRANCH}") {
+    repository(owner: "i7eo", name: "unconfig") {
+      object(expression: "master") {
         ... on Commit {
           ${options
             .map(({ path, after }, index) => {
