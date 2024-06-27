@@ -36,6 +36,9 @@ jobs:
       - name: Install Dependencies
         run: pnpm install --no-frozen-lockfile
 
+      - name: Setup Contributor
+        run: GITHUB_TOKEN=$GITHUB_TOKEN pnpm build:contributor
+
       - name: Build Packages
         run: pnpm build
 
@@ -44,9 +47,6 @@ jobs:
 
       - name: Fetch Github User Name
         run: git config --global user.name $(git log -n 1 --pretty=format:%an)
-
-      - name: Setup Contributor
-        run: GITHUB_TOKEN=$GITHUB_TOKEN pnpm build:contributor
 
       - name: Generate changelogrc
         run: pnpm changelog:gen
