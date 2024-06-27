@@ -10,6 +10,15 @@ section: 'introduction'
 
 ## 27-06-2024
 
+### 10:38:41 AM
+
+**@unconfig/changeset-config** `v0.1.6`
+
+- test create release
+
+
+## 27-06-2024
+
 ### 10:32:22 AM
 
 **@unconfig/changeset-config** `v0.1.5`
