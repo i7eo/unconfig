@@ -131,23 +131,21 @@ export async function changesetsGenerateReleases(
     `,
   )
 
-  // Push updated packages to github with tags
-  const gitPushCommand = `git pull && git add . && git diff --staged --quiet || git commit -m "docs: 📝 add changelogs for $(git rev-parse --short HEAD) [skip ci]" && git push origin ${env.GITHUB_BRANCH} --follow-tags`
-  const gitPushCommandOutput = execSync(gitPushCommand).toString()
-  // eslint-disable-next-line no-console
-  console.log(
-    `
-    🚀🚀🚀 Push updated packages to github with tags. 🚀🚀🚀
-    ${gitPushCommandOutput}
-    `,
-  )
-
   // Create release for each published package
   const { packages: pkgs } = await getPackages(cwd)
+  // eslint-disable-next-line no-console
+  console.log('[changeset-config/generate-releases] cwd:', cwd)
+  // eslint-disable-next-line no-console
+  console.log('[changeset-config/generate-releases] pkgs:', pkgs)
   const releasedPkgs = await getReleasedPackages(
     publishCommandOutput,
     pkgs,
     pkgPrefix,
+  )
+  // eslint-disable-next-line no-console
+  console.log(
+    '[changeset-config/generate-releases] releasedPkgs:',
+    releasedPkgs,
   )
   for (const pkg of releasedPkgs) {
     await createRelease(octokit, {
@@ -159,4 +157,15 @@ export async function changesetsGenerateReleases(
   }
   // eslint-disable-next-line no-console
   console.log(`🚀🚀🚀 Create release for each published package. 🚀🚀🚀`)
+
+  // Push updated packages to github with tags
+  const gitPushCommand = `git pull && git add . && git diff --staged --quiet || git commit -m "docs: 📝 add changelogs for $(git rev-parse --short HEAD) [skip ci]" && git push origin ${env.GITHUB_BRANCH} --follow-tags`
+  const gitPushCommandOutput = execSync(gitPushCommand).toString()
+  // eslint-disable-next-line no-console
+  console.log(
+    `
+    🚀🚀🚀 Push updated packages to github with tags. 🚀🚀🚀
+    ${gitPushCommandOutput}
+    `,
+  )
 }
