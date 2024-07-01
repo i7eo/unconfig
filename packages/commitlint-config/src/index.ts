@@ -1,5 +1,8 @@
-/** @type {import('czg').UserConfig} */
-const presetBasic = {
+import type { UserConfig } from 'czg'
+
+export type Config = UserConfig
+
+const presetBasic: Partial<Config> = {
   ignores: [(commit: any) => commit.includes('init')],
   extends: ['@commitlint/config-conventional'],
   rules: {
@@ -19,8 +22,7 @@ const presetBasic = {
   },
 }
 
-/** @type {import('czg').UserConfig} */
-const presetAll = {
+const presetAll: Partial<Config> = {
   ...presetBasic,
   prompt: {
     useEmoji: true,
@@ -30,3 +32,22 @@ const presetAll = {
 }
 
 export { presetBasic as basic, presetAll as all }
+
+/**
+ *
+ * @param config
+ * @returns
+ */
+export function configBuilder(config: Config = {}): Config {
+  let configs = {
+    ...presetAll,
+  }
+
+  if (Object.keys(config).length > 0) {
+    configs = {
+      ...configs,
+      ...config,
+    }
+  }
+  return configs
+}

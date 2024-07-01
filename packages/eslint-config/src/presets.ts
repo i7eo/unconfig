@@ -1,4 +1,4 @@
-import { hasVue } from './env'
+import { hasVue } from '@unconfig/utils'
 import {
   comments,
   ignores,
@@ -48,7 +48,7 @@ export const presetAll = [
   ...prettier,
 ]
 export { presetBasic as basic, presetAll as all }
-
+export type Config = FlatESLintConfig
 /**
  *
  * @param config
@@ -56,7 +56,7 @@ export { presetBasic as basic, presetAll as all }
  * @returns
  */
 export function configBuilder(
-  config: FlatESLintConfig | FlatESLintConfig[] = [],
+  config: Config | Config[] = [],
   {
     markdown: enableMarkdown = true,
     prettier: enablePrettier = true,
@@ -70,7 +70,7 @@ export function configBuilder(
     markdown: boolean
     sortKeys: boolean
   }> = {},
-): FlatESLintConfig[] {
+): Config[] {
   const configs = [...presetBasic, ...yml, ...presetJsonc]
   if (enableVue) {
     configs.push(...vue)

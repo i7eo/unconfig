@@ -1,6 +1,6 @@
 import globals from 'globals'
+import { isInEditor } from '@unconfig/utils'
 import { pluginUnusedImports } from '../plugins'
-import { isInEditor } from '../env'
 import type { FlatESLintConfig } from 'eslint-define-config'
 
 export const restrictedSyntaxJs = [

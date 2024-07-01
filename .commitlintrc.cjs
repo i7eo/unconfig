@@ -1,6 +1,7 @@
 const fs = require('node:fs')
 const path = require('node:path')
-const _config = require('@unconfig/commitlint-config').all
+const all = require('@unconfig/commitlint-config').all
+const configBuilder = require('@unconfig/commitlint-config').configBuilder
 
 const excludeFileNames = ['.DS_Store', 'README.md']
 
@@ -28,15 +29,18 @@ function createScopes() {
   ]
 }
 
-module.exports = {
-  ..._config,
+const config = configBuilder({
+  ...all,
 
   prompt: {
-    ..._config.prompt,
+    ...all.prompt,
     scopes: [...createScopes()],
   },
+
   rules: {
-    ..._config.rules,
+    ...all.rules,
     'scope-enum': [2, 'always', createScopes()],
   },
-}
+})
+
+module.exports = config

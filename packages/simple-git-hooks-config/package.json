@@ -1,6 +1,6 @@
 {
   "name": "@unconfig/simple-git-hooks-config",
-  "version": "0.1.3",
+  "version": "0.1.9",
   "description": "🚀 The package offer simple-git-hooks-config for @unconfig!",
   "keywords": [
     "unconfig",
@@ -58,12 +58,14 @@
     "clean:deps": "rimraf node_modules"
   },
   "peerDependencies": {
-    "simple-git-hooks": "^2.8.1"
+    "simple-git-hooks": "^2.11.1"
   },
   "dependencies": {
     "simple-git-hooks": "^2.11.1"
   },
   "devDependencies": {
+    "npm-run-all2": "^6.2.0",
+    "rimraf": "^5.0.7",
     "tsup": "^8.1.0"
   },
   "engines": {

@@ -1,5 +1,8 @@
-/** @type {import('stylelint').Config} */
-const presetBasic = {
+import type { Config as StylelintConfig } from 'stylelint'
+
+export type Config = StylelintConfig
+
+const presetBasic: Config = {
   extends: [
     'stylelint-config-standard',
     'stylelint-config-property-sort-order-smacss',
@@ -26,7 +29,7 @@ const presetBasic = {
         'stylelint-config-standard-scss',
         'stylelint-config-recommended-vue/scss',
       ],
-      rule: {
+      rules: {
         'scss/percent-placeholder-pattern': null,
       },
     },
@@ -483,9 +486,27 @@ const presetBasic = {
   ignoreFiles: ['**/*.js', '**/*.jsx', '**/*.tsx', '**/*.ts', '**/*.json'],
 }
 
-/** @type {import('stylelint').Config} */
-const presetAll = {
+const presetAll: Config = {
   ...presetBasic,
 }
 
 export { presetBasic as basic, presetAll as all }
+
+/**
+ *
+ * @param config
+ * @returns
+ */
+export function configBuilder(config: Config = {}): Config {
+  let configs = {
+    ...presetAll,
+  }
+
+  if (Object.keys(config).length > 0) {
+    configs = {
+      ...configs,
+      ...config,
+    }
+  }
+  return configs
+}

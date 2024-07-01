@@ -1,6 +1,6 @@
 {
   "name": "@unconfig/github",
-  "version": "0.1.3",
+  "version": "0.1.9",
   "description": "🚀 The package offer github for unconfig!",
   "keywords": [
     "monorepo",
@@ -61,6 +61,8 @@
     "lodash-es": "^4.17.21"
   },
   "devDependencies": {
+    "npm-run-all2": "^6.2.0",
+    "rimraf": "^5.0.7",
     "tsup": "^8.1.0",
     "tsx": "^4.15.7"
   },

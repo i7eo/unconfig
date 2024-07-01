@@ -1,4 +1,4 @@
-const configBuilder = require('dist/index.js').configBuilder
+const configBuilder = require('./dist/index.js').configBuilder
 const config = configBuilder()
 // [
 //   {

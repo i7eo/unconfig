@@ -1,12 +1,14 @@
-/** @type {import('prettier').Config} */
-const presetBasic = {
+import type { Config as PrettierConfig } from 'prettier'
+
+export type Config = PrettierConfig
+
+const presetBasic: Config = {
   semi: false,
   singleQuote: true,
   trailingComma: 'all',
 }
 
-/** @type {import('prettier').Config} */
-const presetAll = {
+const presetAll: Config = {
   ...presetBasic,
   overrides: [
     {
@@ -47,3 +49,21 @@ const presetAll = {
 }
 
 export { presetBasic as basic, presetAll as all }
+/**
+ *
+ * @param config
+ * @returns
+ */
+export function configBuilder(config: Config = {}): Config {
+  let configs = {
+    ...presetAll,
+  }
+
+  if (Object.keys(config).length > 0) {
+    configs = {
+      ...configs,
+      ...config,
+    }
+  }
+  return configs
+}

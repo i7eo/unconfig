@@ -1,6 +1,6 @@
 {
   "name": "@unconfig/meta",
-  "version": "0.1.2",
+  "version": "0.1.9",
   "description": "🚀 The package offer meta for @unconfig!",
   "keywords": [
     "unconfig",
@@ -57,6 +57,8 @@
     "clean:deps": "rimraf node_modules"
   },
   "devDependencies": {
+    "npm-run-all2": "^6.2.0",
+    "rimraf": "^5.0.7",
     "tsup": "^8.1.0"
   },
   "engines": {

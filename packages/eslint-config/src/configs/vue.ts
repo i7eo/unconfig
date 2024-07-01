@@ -1,22 +1,9 @@
 import process from 'node:process'
-import { getPackageInfoSync } from 'local-pkg'
+import { isVue3 } from '@unconfig/utils'
 import { GLOB_VUE } from '../globs'
 import { parserVue, pluginVue, tseslint } from '../plugins'
 import { typescriptCore } from './typescript'
 import type { FlatESLintConfig, Rules } from 'eslint-define-config'
-
-export function getVueVersion() {
-  const pkg = getPackageInfoSync('vue', { paths: [process.cwd()] })
-  if (
-    pkg &&
-    typeof pkg.version === 'string' &&
-    !Number.isNaN(+pkg.version[0])
-  ) {
-    return +pkg.version[0]
-  }
-  return 3
-}
-const isVue3 = getVueVersion() === 3
 
 export const reactivityTransform: FlatESLintConfig[] = [
   {
@@ -119,7 +106,7 @@ export const vue: FlatESLintConfig[] = [
     },
     processor: pluginVue.processors['.vue'],
     rules: {
-      ...(isVue3 ? vue3Rules : vue2Rules),
+      ...(isVue3(process.cwd()) ? vue3Rules : vue2Rules),
       ...vueCustomRules,
     },
   },
