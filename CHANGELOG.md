@@ -10,6 +10,55 @@ section: 'introduction'
 
 <!-- CHANGELOG:INSERT -->
 
+## 01-07-2024
+
+### 7:50:38 AM
+
+**@unconfig/utils** `v0.1.10`
+
+- Unified upgrade version
+
+**@unconfig/meta** `v0.1.10`
+
+- Unified upgrade version
+
+**@unconfig/github** `v0.1.10`
+
+- Unified upgrade version
+
+**@unconfig/ts-config** `v0.1.10`
+
+- Unified upgrade version
+
+**@unconfig/eslint-config** `v0.1.10`
+
+- Unified upgrade version
+
+**@unconfig/prettier-config** `v0.1.10`
+
+- Unified upgrade version
+
+**@unconfig/stylelint-config** `v0.1.10`
+
+- Unified upgrade version
+
+**@unconfig/changeset-config** `v0.1.10`
+
+- Unified upgrade version
+
+**@unconfig/commitlint-config** `v0.1.10`
+
+- Unified upgrade version
+
+**@unconfig/lint-staged-config** `v0.1.10`
+
+- Unified upgrade version
+
+**@unconfig/simple-git-hooks-config** `v0.1.10`
+
+- Unified upgrade version
+
+
 ## 27-06-2024
 
 ### 11:06:30 AM
