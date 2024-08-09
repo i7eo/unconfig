@@ -63,18 +63,18 @@
     "czg": "^1.9.3"
   },
   "dependencies": {
-    "@commitlint/cli": "^19.3.0",
+    "@commitlint/cli": "^19.4.0",
     "@commitlint/config-conventional": "^19.2.2",
     "@commitlint/types": "^19.0.3",
-    "czg": "^1.9.3"
+    "czg": "^1.9.4"
   },
   "devDependencies": {
-    "npm-run-all2": "^6.2.0",
-    "rimraf": "^5.0.7",
-    "tsup": "^8.1.0"
+    "npm-run-all2": "^6.2.2",
+    "rimraf": "^5.0.10",
+    "tsup": "^8.2.4"
   },
   "engines": {
     "node": ">=20",
-    "pnpm": ">=9"
+    "pnpm": ">=9.7.0"
   }
 }
