@@ -69,7 +69,7 @@
     "czg": "^1.9.3"
   },
   "devDependencies": {
-    "npm-run-all2": "^6.2.0",
+    "npm-run-all2": "^7.0.2",
     "rimraf": "^5.0.7",
     "tsup": "^8.1.0"
   },

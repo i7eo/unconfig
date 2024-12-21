@@ -68,7 +68,7 @@
     "@unconfig/ts-config": "workspace:*",
     "@vitest/ui": "^1.6.0",
     "jsdom": "^24.1.0",
-    "npm-run-all2": "^6.2.0",
+    "npm-run-all2": "^7.0.2",
     "rimraf": "^5.0.7",
     "tsup": "^8.1.0",
     "tsx": "^4.16.0",
