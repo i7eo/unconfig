@@ -10,6 +10,15 @@ section: 'introduction'
 
 <!-- CHANGELOG:INSERT -->
 
+## 09-04-2026
+
+### 9:47:39 AM
+
+**@unconfig/ts-config-latest** `v0.0.1`
+
+- feat morden ts config
+
+
 ## 01-07-2024
 
 ### 7:50:38 AM
