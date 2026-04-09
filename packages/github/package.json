@@ -55,19 +55,19 @@
     "clean:deps": "rimraf node_modules"
   },
   "dependencies": {
-    "@octokit/core": "^6.1.2",
+    "@octokit/core": "^6.1.6",
     "@types/lodash-es": "^4.17.12",
     "@unconfig/meta": "workspace:*",
-    "lodash-es": "^4.17.21"
+    "lodash-es": "^4.18.1"
   },
   "devDependencies": {
-    "npm-run-all2": "^6.2.0",
-    "rimraf": "^5.0.7",
-    "tsup": "^8.1.0",
-    "tsx": "^4.15.7"
+    "npm-run-all2": "^6.2.6",
+    "rimraf": "^5.0.10",
+    "tsup": "^8.5.1",
+    "tsx": "^4.21.0"
   },
   "engines": {
     "node": ">=20",
-    "pnpm": ">=9"
+    "pnpm": ">=9.15.9"
   }
 }

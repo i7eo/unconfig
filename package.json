@@ -1,7 +1,7 @@
 {
   "name": "@unconfig/repository",
   "private": true,
-  "packageManager": "pnpm@9.4.0",
+  "packageManager": "pnpm@9.15.9",
   "description": "🚀 A modern, high-performance monorepo project built to simplify project config!",
   "type": "module",
   "keywords": [
@@ -54,9 +54,9 @@
     "changeset:gen": "changeset"
   },
   "devDependencies": {
-    "@changesets/changelog-github": "^0.5.0",
+    "@changesets/changelog-github": "^0.6.0",
     "@types/jsdom": "^21.1.7",
-    "@types/node": "^20.14.9",
+    "@types/node": "^20.19.39",
     "@unconfig/changeset-config": "workspace:*",
     "@unconfig/commitlint-config": "workspace:*",
     "@unconfig/eslint-config": "workspace:*",
@@ -66,19 +66,19 @@
     "@unconfig/simple-git-hooks-config": "workspace:*",
     "@unconfig/stylelint-config": "workspace:*",
     "@unconfig/ts-config": "workspace:*",
-    "@vitest/ui": "^1.6.0",
+    "@vitest/ui": "^1.6.1",
     "jsdom": "^24.1.0",
-    "npm-run-all2": "^6.2.0",
-    "rimraf": "^5.0.7",
-    "tsup": "^8.1.0",
-    "tsx": "^4.16.0",
-    "turbo": "^2.0.6",
-    "typescript": "^5.5.2",
+    "npm-run-all2": "^6.2.6",
+    "rimraf": "^5.0.10",
+    "tsup": "^8.5.1",
+    "tsx": "^4.21.0",
+    "turbo": "^2.9.5",
+    "typescript": "^5.9.3",
     "vitest": "^1.6.0"
   },
   "engines": {
     "node": ">=20",
-    "pnpm": ">=9"
+    "pnpm": ">=9.15.9"
   },
   "pnpm": {
     "peerDependencyRules": {
