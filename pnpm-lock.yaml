@@ -106,8 +106,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/meta
       '@vite-pwa/vitepress':
-        specifier: ^0.5.0
-        version: 0.5.0(vite-plugin-pwa@0.20.0(vite@5.3.2(@types/node@20.14.9)(terser@5.31.1))(workbox-build@7.1.1)(workbox-window@7.1.0))
+        specifier: ^1.1.0
+        version: 1.1.0(vite-plugin-pwa@0.20.0(vite@5.3.2(@types/node@20.14.9)(terser@5.31.1))(workbox-build@7.1.1)(workbox-window@7.1.0))
       '@vitejs/plugin-vue':
         specifier: ^5.0.5
         version: 5.0.5(vite@5.3.2(@types/node@20.14.9)(terser@5.31.1))(vue@3.4.31(typescript@5.5.2))
@@ -1911,11 +1911,11 @@ packages:
     resolution: {integrity: sha512-+oczpFfUUeEAvnLe1+ir5Y98RG45UDb7QXQRp/EHxIY9MD1MT6nyWw3YL2++mPhhOZMwhr2a4d1jYx0yVQxrEw==}
     engines: {node: '>=20', pnpm: '>=9'}
 
-  '@vite-pwa/vitepress@0.5.0':
-    resolution: {integrity: sha512-a+BnACLMYOf/u2o6RhOJIdJgOW9wym9mTJGWbOLzFHE+fPjg+z1t/Xqm9LvOBQYEDIkrGrf+KxN4COQ0B8hbHg==}
+  '@vite-pwa/vitepress@1.1.0':
+    resolution: {integrity: sha512-enif5C2JmepS69Ak7PSr6K3Eimsg7VyryZo1Z6NiIPNDnjXFlOqxwBYaq8R/d0M7akArJsjos7KmQnEfNFf5nA==}
     peerDependencies:
-      '@vite-pwa/assets-generator': ^0.2.4
-      vite-plugin-pwa: '>=0.20.0 <1'
+      '@vite-pwa/assets-generator': ^1.0.0
+      vite-plugin-pwa: ^1.2.0
     peerDependenciesMeta:
       '@vite-pwa/assets-generator':
         optional: true
@@ -2767,6 +2767,7 @@ packages:
   eslint-define-config@2.1.0:
     resolution: {integrity: sha512-QUp6pM9pjKEVannNAbSJNeRuYwW3LshejfyBBpjeMGaJjaDUpVps4C6KVR8R7dWZnD3i0synmrE36znjTkJvdQ==}
     engines: {node: '>=18.0.0', npm: '>=9.0.0', pnpm: '>=8.6.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 
   eslint-import-resolver-node@0.3.9:
     resolution: {integrity: sha512-WFj2isz22JahUv+B788TlO3N6zL3nNJGU8CcZbPZvVEkBPaJdCV4vy5wyghty5ROFbCRnm132v8BScu5/1BQ8g==}
@@ -2798,6 +2799,7 @@ packages:
   eslint-plugin-markdown@5.0.0:
     resolution: {integrity: sha512-kY2u9yDhzvfZ0kmRTsvgm3mTnvZgTSGIIPeHg3yesSx4R5CTCnITUjCPhzCD1MUhNcqHU5Tr6lzx+02EclVPbw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    deprecated: Please use @eslint/markdown instead
     peerDependencies:
       eslint: '>=8'
 
@@ -3116,6 +3118,7 @@ packages:
   git-raw-commits@4.0.0:
     resolution: {integrity: sha512-ICsMM1Wk8xSGMowkOmPrzo2Fgmfo4bMHLNX6ytHjajRJUqvHOw/TFapQ+QG75c3X/tTDDhOSRPGC52dDbNM8FQ==}
     engines: {node: '>=16'}
+    deprecated: This package is no longer maintained. For the JavaScript API, please use @conventional-changelog/git-client instead.
     hasBin: true
 
   gitlog@4.0.8:
@@ -3133,6 +3136,7 @@ packages:
   glob@10.4.2:
     resolution: {integrity: sha512-GwMlUF6PkPo3Gk21UxkCohOv0PLcIXVtKyLlpEI28R/cO/4eNOdmLk3CMW1wROV/WR/EsZOWAfBbBOqYvs88/w==}
     engines: {node: '>=16 || 14 >=14.18'}
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
     hasBin: true
 
   glob@7.2.3:
@@ -4628,6 +4632,7 @@ packages:
   sitemap@8.0.0:
     resolution: {integrity: sha512-+AbdxhM9kJsHtruUF39bwS/B0Fytw6Fr1o4ZAIAEqA6cke2xcoO2GleBw9Zw7nRzILVEgz7zBM5GiTJjie1G9A==}
     engines: {node: '>=14.0.0', npm: '>=6.0.0'}
+    deprecated: 'SECURITY: Multiple vulnerabilities fixed in 8.0.1 (XML injection, path traversal, command injection, protocol injection). Upgrade immediately: npm install sitemap@8.0.1'
     hasBin: true
 
   slash@3.0.0:
@@ -4663,6 +4668,7 @@ packages:
   source-map@0.8.0-beta.0:
     resolution: {integrity: sha512-2ymg6oRBpebeZi9UUNsgQ89bhx01TcTkmNTGnNO88imTmbSgy4nfujrgVEFKWpMTEGA11EDkTt7mqObTPdigIA==}
     engines: {node: '>= 8'}
+    deprecated: The work that was done in this beta branch won't be included in future versions
 
   sourcemap-codec@1.4.8:
     resolution: {integrity: sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA==}
@@ -5341,6 +5347,7 @@ packages:
   whatwg-encoding@3.1.1:
     resolution: {integrity: sha512-6qN4hJdMwfYBtE3YBTTHhoeuUrDBPZmbQaxWAqSALV/MeEnR5z1xd8UKud2RAkFoPkmB+hli1TZSnyi84xz1vQ==}
     engines: {node: '>=18'}
+    deprecated: Use @exodus/bytes instead for a more spec-conformant and faster implementation
 
   whatwg-mimetype@4.0.0:
     resolution: {integrity: sha512-QaKxh0eNIi2mE9p2vEdzfagOKHCcj1pJ56EEHGQOVxp8r9/iszLUUV7v89x9O1p/T+NlTM5W7jW6+cz4Fq1YVg==}
@@ -7279,7 +7286,7 @@ snapshots:
 
   '@unconfig/meta@0.1.10': {}
 
-  '@vite-pwa/vitepress@0.5.0(vite-plugin-pwa@0.20.0(vite@5.3.2(@types/node@20.14.9)(terser@5.31.1))(workbox-build@7.1.1)(workbox-window@7.1.0))':
+  '@vite-pwa/vitepress@1.1.0(vite-plugin-pwa@0.20.0(vite@5.3.2(@types/node@20.14.9)(terser@5.31.1))(workbox-build@7.1.1)(workbox-window@7.1.0))':
     dependencies:
       vite-plugin-pwa: 0.20.0(vite@5.3.2(@types/node@20.14.9)(terser@5.31.1))(workbox-build@7.1.1)(workbox-window@7.1.0)
 
