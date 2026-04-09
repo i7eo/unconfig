@@ -1,0 +1,9 @@
+{
+  "display": "TSConfig Bun",
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "./base.json",
+  "compilerOptions": {
+    "lib": ["ESNext"],
+    "types": ["bun"]
+  }
+}

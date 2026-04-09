@@ -1,0 +1,40 @@
+{
+  "name": "@unconfig/ts-config-latest",
+  "version": "0.0.0",
+  "description": "🚀 The package offer ts-config-latest for @unconfig!",
+  "keywords": [
+    "unconfig",
+    "monorepo",
+    "pnpm",
+    "turborepo",
+    "changesets",
+    "typescript",
+    "ts-config"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/i7eo/unconfig/blob/master/packages/ts-config-latest#readme",
+  "bugs": {
+    "url": "https://github.com/i7eo/unconfig/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/i7eo/unconfig.git",
+    "directory": "packages/ts-config-latest"
+  },
+  "author": "i7eo <admin@i7eo.com> (https://github.com/i7eo)",
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "base.json",
+    "bun.json",
+    "node.json",
+    "package.json",
+    "react.json",
+    "vue.json",
+    "web.json"
+  ],
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  }
+}
