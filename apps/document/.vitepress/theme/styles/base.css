@@ -10,7 +10,7 @@ html.dark {
 }
 
 .dark .VPContent,
-.dark .VPFooter   {
+.dark .VPFooter {
   background-color: rgb(10, 10, 11);
   background-image: url('/grid.svg');
 }

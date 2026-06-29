@@ -1,7 +1,20 @@
 {
   "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
+    { "path": "./tsconfig.node.json" },
+
+    { "path": "./apps/document" },
+
+    { "path": "./packages/changeset-config" },
+    { "path": "./packages/changeset-workflow" },
+    { "path": "./packages/commitlint-config" },
+    { "path": "./packages/eslint-config" },
+    { "path": "./packages/github" },
+    { "path": "./packages/lint-staged-config" },
+    { "path": "./packages/meta" },
+    { "path": "./packages/prettier-config" },
+    { "path": "./packages/simple-git-hooks-config" },
+    { "path": "./packages/stylelint-config" },
+    { "path": "./packages/utils" }
   ],
   "files": []
 }

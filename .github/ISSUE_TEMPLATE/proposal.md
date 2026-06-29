@@ -11,7 +11,9 @@ Please use this template to propose a change you'd like to make to unconfig
 -->
 
 <!-- markdownlint-disable MD025 -->
+
 # unconfig contribution proposal
+
 <!-- markdownlint-disable MD025 -->
 
 ## The problem

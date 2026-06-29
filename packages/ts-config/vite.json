@@ -1,7 +1,0 @@
-{
-  "display": "TSConfig Vite",
-  "extends": "./base.json",
-  "compilerOptions": {
-    "types": ["node", "vitest"]
-  }
-}

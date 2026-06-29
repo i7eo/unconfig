@@ -18,7 +18,11 @@ export const unicorn: FlatESLintConfig[] = [
         'error',
         {
           cases: { kebabCase: true, pascalCase: true },
-          ignore: [/^[A-Z]+\..*$/, /import_map\.json/],
+          ignore: [
+            /^[A-Z]+\..*$/,
+            /import_map\.json/,
+            /\.github\/ISSUE_TEMPLATE/,
+          ],
         },
       ],
       'unicorn/new-for-builtins': 'error',
@@ -72,6 +76,12 @@ export const unicorn: FlatESLintConfig[] = [
       // 'unicorn/prefer-top-level-await': 'error',
       'unicorn/prefer-type-error': 'error',
       'unicorn/throw-new-error': 'error',
+    },
+  },
+  {
+    files: ['**/.github/ISSUE_TEMPLATE/**'],
+    rules: {
+      'unicorn/filename-case': 'off',
     },
   },
 ]

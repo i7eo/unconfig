@@ -1,0 +1,30 @@
+{
+  "extends": ["@unconfig/ts-config/web.json"],
+  "compilerOptions": {
+    "composite": true,
+    "paths": {
+      "@/*": ["./*"]
+    },
+    "declaration": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": true,
+    "outDir": "./dist"
+  },
+  "include": [
+    "./**/*",
+    "./**/typings/**/*",
+    "./**/*.json",
+    "./**/.vitepress/**/*",
+    "./**/*.md"
+  ],
+  "exclude": [
+    "**/__tests__/**",
+    "**/tests/**",
+    "**/dist/**/*",
+    "**/node_modules/**/*",
+    "**/*.config.ts"
+  ],
+  "vueCompilerOptions": {
+    "vitePressExtensions": [".md"]
+  }
+}

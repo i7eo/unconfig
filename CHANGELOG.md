@@ -10,6 +10,56 @@ section: 'introduction'
 
 <!-- CHANGELOG:INSERT -->
 
+## 29-06-2026
+
+**@unconfig/changeset-config** `v0.1.11`
+
+- unified version
+
+**@unconfig/changeset-workflow** `v0.0.2`
+
+- unified version
+
+**@unconfig/commitlint-config** `v0.1.11`
+
+- unified version
+
+**@unconfig/eslint-config** `v0.1.11`
+
+- unified version
+
+**@unconfig/github** `v0.1.11`
+
+- unified version
+
+**@unconfig/lint-staged-config** `v0.1.11`
+
+- unified version
+
+**@unconfig/meta** `v0.1.11`
+
+- unified version
+
+**@unconfig/prettier-config** `v0.1.11`
+
+- unified version
+
+**@unconfig/simple-git-hooks-config** `v0.1.11`
+
+- unified version
+
+**@unconfig/stylelint-config** `v0.1.11`
+
+- unified version
+
+**@unconfig/ts-config** `v0.1.11`
+
+- unified version
+
+**@unconfig/utils** `v0.1.11`
+
+- unified version
+
 ## 09-04-2026
 
 ### 9:47:39 AM

@@ -1,0 +1,75 @@
+{
+  "name": "@unconfig/changeset-workflow",
+  "version": "0.0.1",
+  "description": "Project-specific changesets workflow helpers for @unconfig.",
+  "type": "module",
+  "keywords": [
+    "unconfig",
+    "monorepo",
+    "pnpm",
+    "turborepo",
+    "changesets",
+    "changeset",
+    "changeset-workflow"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/i7eo/unconfig/blob/master/packages/changeset-workflow#readme",
+  "bugs": {
+    "url": "https://github.com/i7eo/unconfig/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/i7eo/unconfig.git",
+    "directory": "packages/changeset-workflow"
+  },
+  "author": "i7eo <admin@i7eo.com> (https://github.com/i7eo)",
+  "files": [
+    "dist"
+  ],
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "publishConfig": {
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.mts",
+    "exports": {
+      ".": {
+        "types": "./dist/index.d.mts",
+        "import": "./dist/index.mjs",
+        "require": "./dist/index.cjs"
+      },
+      "./package.json": "./package.json"
+    }
+  },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "DEV=true pnpm build",
+    "test": "vitest",
+    "lint": "run-s \"lint:**\"",
+    "lint:prettier": "prettier . --write",
+    "clean": "run-s \"clean:**\"",
+    "clean:cache": "rimraf .turbo && rimraf dist",
+    "clean:deps": "rimraf node_modules"
+  },
+  "peerDependencies": {
+    "@changesets/cli": "^2.31.0"
+  },
+  "dependencies": {
+    "@changesets/assemble-release-plan": "^6.0.10",
+    "@changesets/cli": "^2.31.0",
+    "@changesets/config": "^3.1.4",
+    "@changesets/pre": "^2.0.2",
+    "@changesets/read": "^0.6.7",
+    "@changesets/types": "^6.1.0",
+    "@manypkg/get-packages": "^3.1.0"
+  },
+  "devDependencies": {
+    "npm-run-all2": "^9.0.2",
+    "rimraf": "^6.1.3",
+    "tsdown": "^0.22.3"
+  },
+  "engines": {
+    "node": ">=24",
+    "pnpm": ">=9"
+  }
+}

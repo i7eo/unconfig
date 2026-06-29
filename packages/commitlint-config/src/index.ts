@@ -8,7 +8,7 @@ const presetBasic: Partial<Config> = {
   rules: {
     'body-leading-blank': [1, 'always'],
     'footer-leading-blank': [1, 'always'],
-    'header-max-length': [2, 'always', 80],
+    'header-max-length': [2, 'always', 256],
     'scope-case': [2, 'always', 'lower-case'],
     'subject-case': [
       1,

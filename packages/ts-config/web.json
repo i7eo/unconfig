@@ -1,10 +1,9 @@
 {
   "display": "TSConfig Web",
+  "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "./base.json",
   "compilerOptions": {
-    "jsx": "preserve",
-    "allowJs": true,
-
-    "lib": ["esnext", "dom", "dom.iterable"]
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": true
   }
 }

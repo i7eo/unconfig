@@ -1,6 +1,0 @@
-{
-  "display": "TSConfig Vite Without Base",
-  "compilerOptions": {
-    "types": ["node", "vitest"]
-  }
-}

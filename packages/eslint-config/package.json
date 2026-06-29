@@ -2,6 +2,7 @@
   "name": "@unconfig/eslint-config",
   "version": "0.1.10",
   "description": "🚀 The package offer eslint-config for @unconfig!",
+  "type": "module",
   "keywords": [
     "unconfig",
     "monorepo",
@@ -23,32 +24,25 @@
   },
   "author": "i7eo <admin@i7eo.com> (https://github.com/i7eo)",
   "files": [
-    "*.d.ts",
     "dist"
   ],
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs"
-    },
-    "./*": [
-      "./*",
-      "./*.d.ts"
-    ]
-  },
-  "typesVersions": {
-    "*": {
-      "*": [
-        "./dist/*",
-        "./*"
-      ]
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "publishConfig": {
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.mts",
+    "exports": {
+      ".": {
+        "types": "./dist/index.d.mts",
+        "import": "./dist/index.mjs",
+        "require": "./dist/index.cjs"
+      },
+      "./package.json": "./package.json"
     }
   },
   "scripts": {
-    "build": "tsup",
+    "build": "tsdown",
     "dev": "DEV=true pnpm build",
     "test": "vitest",
     "lint": "run-s \"lint:**\"",
@@ -58,40 +52,41 @@
     "clean:deps": "rimraf node_modules"
   },
   "peerDependencies": {
-    "eslint": "^9.6.0"
+    "eslint": "^10.6.0"
   },
   "dependencies": {
+    "@eslint/compat": "^2.1.0",
     "@unconfig/utils": "workspace:*",
-    "eslint": "^9.6.0",
-    "eslint-config-prettier": "^9.1.0",
+    "eslint": "^10.6.0",
+    "eslint-config-prettier": "^10.1.8",
     "eslint-define-config": "^2.1.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
-    "eslint-plugin-import-x": "^0.5.2",
-    "eslint-plugin-jsonc": "^2.16.0",
-    "eslint-plugin-markdown": "^5.0.0",
-    "eslint-plugin-markdownlint": "^0.6.0",
-    "eslint-plugin-n": "^17.9.0",
-    "eslint-plugin-perfectionist": "^2.11.0",
-    "eslint-plugin-prettier": "^5.1.3",
-    "eslint-plugin-unicorn": "^54.0.0",
-    "eslint-plugin-unused-imports": "^4.0.0",
-    "eslint-plugin-vue": "^9.26.0",
-    "eslint-plugin-yml": "^1.14.0",
-    "globals": "^15.7.0",
-    "jsonc-eslint-parser": "^2.4.0",
-    "prettier": "^3.3.2",
-    "typescript-eslint": "^7.14.1",
-    "vue-eslint-parser": "^9.4.3",
-    "yaml-eslint-parser": "^1.2.3"
+    "eslint-plugin-import-x": "^4.17.1",
+    "eslint-plugin-jsonc": "^3.2.0",
+    "eslint-plugin-markdown": "^5.1.0",
+    "eslint-plugin-markdownlint": "^0.10.1",
+    "eslint-plugin-n": "^18.2.1",
+    "eslint-plugin-perfectionist": "^5.9.1",
+    "eslint-plugin-prettier": "^5.5.6",
+    "eslint-plugin-unicorn": "^69.0.0",
+    "eslint-plugin-unused-imports": "^4.4.1",
+    "eslint-plugin-vue": "^10.9.2",
+    "eslint-plugin-yml": "^3.5.0",
+    "globals": "^17.7.0",
+    "jsonc-eslint-parser": "^3.1.0",
+    "prettier": "^3.9.1",
+    "typescript-eslint": "^8.62.0",
+    "vue-eslint-parser": "^10.4.1",
+    "yaml-eslint-parser": "^2.0.0"
   },
   "devDependencies": {
     "@unconfig/prettier-config": "workspace:*",
-    "npm-run-all2": "^6.2.0",
-    "rimraf": "^5.0.7",
-    "tsup": "^8.1.0"
+    "npm-run-all2": "^9.0.2",
+    "rimraf": "^6.1.3",
+    "tsdown": "^0.22.3"
   },
   "engines": {
-    "node": ">=20",
+    "node": ">=24",
     "pnpm": ">=9"
   }
 }

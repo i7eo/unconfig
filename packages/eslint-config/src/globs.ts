@@ -58,6 +58,7 @@ export const GLOB_EXCLUDE = [
   '**/.vite-inspect',
   '**/.nitro',
 
+  '**/docs/superpowers/plans',
   '**/CHANGELOG*.md',
   '**/*.min.*',
   '**/LICENSE*',

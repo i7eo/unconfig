@@ -1,3 +1,5 @@
+import process from 'node:process'
+
 import { GLOB_JS, GLOB_TS, GLOB_TSX } from '../globs'
 import { tseslint } from '../plugins'
 import { restrictedSyntaxJs } from './javascript'
@@ -10,6 +12,7 @@ export const typescriptCore = tseslint.config({
     parser: tseslint.parser,
     parserOptions: {
       sourceType: 'module',
+      tsconfigRootDir: process.cwd(),
     },
   },
   rules: {

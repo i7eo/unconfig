@@ -10,8 +10,9 @@ interface GitHooks {
 export type Config = GitHooks
 
 const presetBasic: Partial<Config> = {
-  'pre-commit': 'pnpm exec lint-staged --concurrent false',
-  'commit-msg': 'pnpm exec commitlint --edit $1',
+  'pre-commit':
+    'NODE_OPTIONS="--import tsx" pnpm exec lint-staged --concurrent false',
+  'commit-msg': 'NODE_OPTIONS="--import tsx" pnpm exec commitlint --edit $1',
 }
 
 const presetAll: Partial<Config> = {

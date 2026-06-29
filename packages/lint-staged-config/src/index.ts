@@ -1,5 +1,5 @@
 import { hasVue } from '@unconfig/utils'
-import type { Config as LintStadgeConfig } from 'lint-staged'
+import type { Configuration as LintStadgeConfig } from 'lint-staged'
 
 const eslintCommand = 'eslint --fix'
 const prettierCommand = 'eslint --fix'

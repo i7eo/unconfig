@@ -2,6 +2,7 @@
   "name": "@unconfig/commitlint-config",
   "version": "0.1.10",
   "description": "🚀 The package offer commitlint-config for @unconfig!",
+  "type": "module",
   "keywords": [
     "unconfig",
     "monorepo",
@@ -23,32 +24,25 @@
   },
   "author": "i7eo <admin@i7eo.com> (https://github.com/i7eo)",
   "files": [
-    "*.d.ts",
     "dist"
   ],
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs"
-    },
-    "./*": [
-      "./*",
-      "./*.d.ts"
-    ]
-  },
-  "typesVersions": {
-    "*": {
-      "*": [
-        "./dist/*",
-        "./*"
-      ]
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "publishConfig": {
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.mts",
+    "exports": {
+      ".": {
+        "types": "./dist/index.d.mts",
+        "import": "./dist/index.mjs",
+        "require": "./dist/index.cjs"
+      },
+      "./package.json": "./package.json"
     }
   },
   "scripts": {
-    "build": "tsup",
+    "build": "tsdown",
     "dev": "DEV=true pnpm build",
     "test": "vitest",
     "lint": "run-s \"lint:**\"",
@@ -58,23 +52,23 @@
     "clean:deps": "rimraf node_modules"
   },
   "peerDependencies": {
-    "@commitlint/cli": "^19.3.0",
-    "@commitlint/config-conventional": "^19.2.2",
-    "czg": "^1.9.3"
+    "@commitlint/cli": "^21.1.0",
+    "@commitlint/config-conventional": "^21.1.0",
+    "czg": "^1.13.1"
   },
   "dependencies": {
-    "@commitlint/cli": "^19.3.0",
-    "@commitlint/config-conventional": "^19.2.2",
-    "@commitlint/types": "^19.0.3",
-    "czg": "^1.9.3"
+    "@commitlint/cli": "^21.1.0",
+    "@commitlint/config-conventional": "^21.1.0",
+    "@commitlint/types": "^21.1.0",
+    "czg": "^1.13.1"
   },
   "devDependencies": {
-    "npm-run-all2": "^6.2.0",
-    "rimraf": "^5.0.7",
-    "tsup": "^8.1.0"
+    "npm-run-all2": "^9.0.2",
+    "rimraf": "^6.1.3",
+    "tsdown": "^0.22.3"
   },
   "engines": {
-    "node": ">=20",
+    "node": ">=24",
     "pnpm": ">=9"
   }
 }

@@ -1,8 +1,0 @@
-{
-  "display": "TSConfig Vitest",
-  "extends": "./web.json",
-  "compilerOptions": {
-    "types": ["node", "jsdom", "vitest/globals"],
-    "skipLibCheck": true
-  }
-}

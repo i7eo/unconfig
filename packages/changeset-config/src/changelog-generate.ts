@@ -11,6 +11,9 @@ import { PROJECT_CHANGELOG_TEMP_FILE } from '@unconfig/meta'
 // } from './format-with-issue-links'
 import type { ComprehensiveRelease, NewChangeset } from '@changesets/types'
 
+type ChangesetsPackages = Parameters<typeof assembleReleasePlan>[1]
+type ManypkgPackages = Awaited<ReturnType<typeof getPackages>>
+
 export interface ChangesetsChangelogGenerateOptions {
   /** Packages we want to have on changelog */
   packages: string[]
@@ -79,6 +82,17 @@ function getReleaseSummary(
   }
 }
 
+function withChangesetsRootPackage(packages: ManypkgPackages) {
+  if (!packages.rootPackage) {
+    throw new Error('Unable to find root package for changesets release plan.')
+  }
+
+  return {
+    ...packages,
+    root: packages.rootPackage,
+  }
+}
+
 // Get changes from changesets and returns the releases with displayName and the changes grouped
 async function getChangesetEntries(
   options: Required<
@@ -90,14 +104,15 @@ async function getChangesetEntries(
     ignorePackages: ignoreChangelogPackages,
     cwd,
   } = options
-  const packages = await getPackages(cwd)
+  const packages = withChangesetsRootPackage(await getPackages(cwd))
+  const changesetsPackages = packages as unknown as ChangesetsPackages
   const preState = await readPreState(cwd)
-  const config = await read(cwd, packages)
+  const config = await read(cwd, changesetsPackages)
   const changesets = await readChangesets(cwd)
 
   const releasePlan = assembleReleasePlan(
     changesets,
-    packages,
+    changesetsPackages,
     config,
     preState,
   )

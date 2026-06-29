@@ -1,0 +1,5 @@
+model_reasoning_effort = "high"
+personality = "pragmatic"
+
+[features]
+memories = true

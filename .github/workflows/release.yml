@@ -48,19 +48,9 @@ jobs:
       - name: Fetch Github User Name
         run: git config --global user.name $(git log -n 1 --pretty=format:%an)
 
-      - name: Generate changelogrc
-        run: pnpm changelog:gen
-
-      - name: Bump version
-        run: pnpm changeset version
-
-      - name: Publish packages and create releases
-        run: |
-          npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN && GITHUB_TOKEN=$GITHUB_TOKEN GITHUB_BRANCH=$GITHUB_BRANCH pnpm changeset:publish
-
-      - name: Generate changelog files
-        run: pnpm changelog:write
-
-      - name: Commit changelog files
-        run: |
-          git add . && git diff --staged --quiet || git commit -am "docs: 📝 update changelog on repository" && git push origin $GITHUB_BRANCH
+      - name: Create release PR or publish
+        uses: changesets/action@v1
+        with:
+          version: npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN && GITHUB_TOKEN=$GITHUB_TOKEN GITHUB_BRANCH=$GITHUB_BRANCH pnpm changeset:version
+          publish: npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN && GITHUB_TOKEN=$GITHUB_TOKEN GITHUB_BRANCH=$GITHUB_BRANCH pnpm changeset:publish
+          createGithubReleases: true

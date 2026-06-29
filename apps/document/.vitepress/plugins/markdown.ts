@@ -1,5 +1,5 @@
 import { getReadingTime } from './../theme/utils'
-import type { Plugin } from 'vite'
+import type { Plugin } from 'vitepress'
 
 const IGNORE_PAGEINFO_PLACEHOLDER = '<!-- ignore-page-info -->'
 const IGNORE_CONTRIBUTOR_PLACEHOLDER = '<!-- ignore-contributor -->'

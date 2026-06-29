@@ -26,18 +26,15 @@
     "CHANGELOG.md",
     "README.md",
     "base.json",
-    "node-without-base.json",
+    "bun.json",
     "node.json",
     "package.json",
-    "vite-without-base.json",
-    "vite.json",
-    "vitest-without-base.json",
-    "vitest.json",
-    "web-without-base.json",
+    "react.json",
+    "vue.json",
     "web.json"
   ],
   "engines": {
-    "node": ">=20",
+    "node": ">=24",
     "pnpm": ">=9"
   }
 }

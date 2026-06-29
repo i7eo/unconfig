@@ -57,19 +57,19 @@ export async function manualGeneratePrereleases(
 
   // create inquire prompt and get user choose package
   const { packages } = await getPackages(cwd)
-  const choices = packages
-    .map(({ packageJson }) => ({
+  const choices = [
+    ...packages.map(({ packageJson }) => ({
       name: `${packageJson.name} (${packageJson.version})`,
       value: packageJson.name,
-    }))
-    // @ts-ignore
-    .concat(new inquirer.Separator())
-  const { pkgName } = await inquirer.prompt([
+    })),
+    new inquirer.Separator(),
+  ]
+  const { pkgName } = await inquirer.prompt<{ pkgName: string }>([
     {
       pageSize: 12,
       name: 'pkgName',
       message: 'Which package to make a pre-release?',
-      type: 'list',
+      type: 'select',
       choices,
     },
   ])
@@ -80,11 +80,14 @@ export async function manualGeneratePrereleases(
   )!
   const { version, name } = packageJson
   const prereleaseTag = semver.prerelease(version)?.[0]
-  const { tag, publish } = await inquirer.prompt([
+  const { tag, publish } = await inquirer.prompt<{
+    tag: string
+    publish: boolean
+  }>([
     {
       name: 'tag',
       message: 'Which tag should be used for the pre-release?',
-      type: 'list',
+      type: 'select',
       choices: [
         {
           name: 'alpha',

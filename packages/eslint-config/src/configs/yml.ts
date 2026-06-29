@@ -2,6 +2,10 @@ import { GLOB_YAML } from '../globs'
 import { parserYml, pluginYml } from '../plugins'
 import type { FlatESLintConfig, Rules } from 'eslint-define-config'
 
+function mergeConfigRules(configs: Array<{ rules?: Rules }>): Rules {
+  return Object.assign({}, ...configs.map((config) => config.rules ?? {}))
+}
+
 export const yml: FlatESLintConfig[] = [
   {
     files: [GLOB_YAML],
@@ -12,8 +16,8 @@ export const yml: FlatESLintConfig[] = [
       yml: pluginYml,
     },
     rules: {
-      ...(pluginYml.configs.standard.rules as unknown as Rules),
-      ...(pluginYml.configs.prettier.rules as unknown as Rules),
+      ...mergeConfigRules(pluginYml.configs.standard),
+      ...mergeConfigRules(pluginYml.configs.prettier),
       'yml/no-empty-mapping-value': 'off',
     },
   },

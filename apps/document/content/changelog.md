@@ -5,8 +5,60 @@ section: 'introduction'
 ---
 
 <!-- markdownlint-disable MD025 -->
+
 # `@unconfig` all changes
+
 <!-- markdownlint-enable MD025 -->
+
+## 29-06-2026
+
+**@unconfig/changeset-config** `v0.1.11`
+
+- unified version
+
+**@unconfig/changeset-workflow** `v0.0.2`
+
+- unified version
+
+**@unconfig/commitlint-config** `v0.1.11`
+
+- unified version
+
+**@unconfig/eslint-config** `v0.1.11`
+
+- unified version
+
+**@unconfig/github** `v0.1.11`
+
+- unified version
+
+**@unconfig/lint-staged-config** `v0.1.11`
+
+- unified version
+
+**@unconfig/meta** `v0.1.11`
+
+- unified version
+
+**@unconfig/prettier-config** `v0.1.11`
+
+- unified version
+
+**@unconfig/simple-git-hooks-config** `v0.1.11`
+
+- unified version
+
+**@unconfig/stylelint-config** `v0.1.11`
+
+- unified version
+
+**@unconfig/ts-config** `v0.1.11`
+
+- unified version
+
+**@unconfig/utils** `v0.1.11`
+
+- unified version
 
 ## 09-04-2026
 
@@ -15,7 +67,6 @@ section: 'introduction'
 **@unconfig/ts-config-latest** `v0.0.1`
 
 - feat morden ts config
-
 
 ## 01-07-2024
 
@@ -65,7 +116,6 @@ section: 'introduction'
 
 - Unified upgrade version
 
-
 ## 27-06-2024
 
 ### 11:06:30 AM
@@ -73,7 +123,6 @@ section: 'introduction'
 **@unconfig/changeset-config** `v0.1.7`
 
 - refactor release creator
-
 
 ## 27-06-2024
 
@@ -83,7 +132,6 @@ section: 'introduction'
 
 - test create release
 
-
 ## 27-06-2024
 
 ### 10:32:22 AM
@@ -91,7 +139,6 @@ section: 'introduction'
 **@unconfig/changeset-config** `v0.1.5`
 
 - test create release
-
 
 ## 27-06-2024
 
@@ -101,7 +148,6 @@ section: 'introduction'
 
 - add create release log
 
-
 ## 27-06-2024
 
 ### 10:17:28 AM
@@ -110,7 +156,6 @@ section: 'introduction'
 
 - fix auto create release logic
 
-
 ## 27-06-2024
 
 ### 9:53:32 AM
@@ -118,7 +163,6 @@ section: 'introduction'
 **@unconfig/github** `v0.1.3`
 
 - add auth
-
 
 ## 27-06-2024
 
@@ -164,7 +208,6 @@ section: 'introduction'
 
 - bump version
 
-
 ## 27-06-2024
 
 ### 9:26:05 AM
@@ -209,20 +252,17 @@ section: 'introduction'
 
 - refactor every package
 
-
 ## 14-03-2023
 
 **@unconfig/ts-config** `v0.1.3`
 
 - add isolatedModules limit
 
-
 ## 13-03-2023
 
 **@unconfig/ts-config** `v0.1.2`
 
 - export vitest.vue3.json
-
 
 ## 13-03-2023
 
@@ -253,7 +293,6 @@ section: 'introduction'
 **@unconfig/simple-git-hooks-config** `v0.1.1`
 
 - update deps version and refactor tsconfig
-
 
 ## 25-01-2023
 
@@ -288,4 +327,3 @@ section: 'introduction'
 **@unconfig/commitlint-config** `v0.1.0`
 
 - Setup version 0.1.0
-
