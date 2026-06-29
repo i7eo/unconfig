@@ -54,4 +54,5 @@ jobs:
         with:
           version: pnpm changeset:version
           publish: pnpm changeset:publish
+          commit: 'docs: 📝 changesets/action version packages'
           createGithubReleases: true
