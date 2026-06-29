@@ -47,7 +47,7 @@ jobs:
         run: git config --global user.name $(git log -n 1 --pretty=format:%an)
 
       - name: Create release PR or publish
-        uses: changesets/action@v2
+        uses: changesets/action@v1
         with:
           version: npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN && GITHUB_TOKEN=$GITHUB_TOKEN GITHUB_BRANCH=$GITHUB_BRANCH pnpm changeset:version
           publish: npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN && GITHUB_TOKEN=$GITHUB_TOKEN GITHUB_BRANCH=$GITHUB_BRANCH pnpm changeset:publish
