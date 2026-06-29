@@ -1,6 +1,7 @@
 {
   "name": "@unconfig/document",
   "version": "0.1.4",
+  "private": true,
   "description": "🚀 The package offer document for @unconfig!",
   "type": "module",
   "keywords": [
@@ -28,7 +29,7 @@
   },
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
-    "@unconfig/github": "^0.1.11",
+    "@unconfig/github": "workspace:^",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.21",
     "medium-zoom": "^1.1.0",
