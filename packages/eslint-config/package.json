@@ -1,6 +1,6 @@
 {
   "name": "@unconfig/eslint-config",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "🚀 The package offer eslint-config for @unconfig!",
   "type": "module",
   "keywords": [

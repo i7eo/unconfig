@@ -1,6 +1,6 @@
 {
   "name": "@unconfig/prettier-config",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "🚀 The package offer prettier-config for @unconfig!",
   "type": "module",
   "keywords": [
