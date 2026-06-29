@@ -81,8 +81,8 @@
     "vitest": "^4.1.9"
   },
   "simple-git-hooks": {
-    "pre-commit": "NODE_OPTIONS=\"--import tsx\" lint-staged --concurrent false",
-    "commit-msg": "NODE_OPTIONS=\"--import tsx\" commitlint --edit $1"
+    "pre-commit": "NODE_OPTIONS=\"--import tsx\" pnpm exec lint-staged --concurrent false",
+    "commit-msg": "NODE_OPTIONS=\"--import tsx\" pnpm exec commitlint --edit $1"
   },
   "engines": {
     "node": ">=24",
