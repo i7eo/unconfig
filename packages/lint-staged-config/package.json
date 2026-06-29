@@ -1,6 +1,6 @@
 {
   "name": "@unconfig/lint-staged-config",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "🚀 The package offer lint-staged-config for @unconfig!",
   "type": "module",
   "keywords": [

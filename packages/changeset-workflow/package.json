@@ -1,6 +1,6 @@
 {
   "name": "@unconfig/changeset-workflow",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Project-specific changesets workflow helpers for @unconfig.",
   "type": "module",
   "keywords": [
