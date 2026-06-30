@@ -83,7 +83,7 @@ function handleVitepressMember(user) {
 onMounted(async () => {
   let result = {}
   try {
-    result = (await import('@unconfig/github/dist/contributor.json')).default
+    result = (await import('@unconfig/github/contributor.json')).default
   }catch {
     result = {}
   }

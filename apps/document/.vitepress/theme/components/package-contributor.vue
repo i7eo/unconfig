@@ -6,7 +6,8 @@ const { frontmatter } = useData()
 const contributors = ref<any[]>([])
 
 onMounted(async () => {
-  const result = (await import('@unconfig/github/dist/contributor.json'))
+  //@ts-ignore
+  const result = (await import('@unconfig/github/contributor.json'))
     .default as any
   contributors.value = result[frontmatter.value.packagePath]
 })

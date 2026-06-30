@@ -124,10 +124,9 @@ async function main() {
 
   if (!isDistExist) await mkdir(resolve(__dirname, '../dist'))
 
-  if (process.env.DEV) {
+  if (process.env.DEV || !process.env.GITHUB_TOKEN) {
     contributors = {}
   } else {
-    if (!process.env.GITHUB_TOKEN) throw new Error('GITHUB_TOKEN is empty')
     try {
       contributors = await getContributors()
     } catch (error: any) {
