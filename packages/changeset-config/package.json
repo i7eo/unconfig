@@ -68,7 +68,7 @@
     "@unconfig/meta": "workspace:*",
     "changesets-format-with-issue-links": "^0.3.0",
     "inquirer": "^14.0.2",
-    "prettier": "^3.9.1",
+    "prettier": "^3.9.4",
     "semver": "^7.8.5"
   },
   "devDependencies": {
@@ -78,6 +78,6 @@
   },
   "engines": {
     "node": ">=24",
-    "pnpm": ">=9"
+    "pnpm": ">=9.15.9"
   }
 }
