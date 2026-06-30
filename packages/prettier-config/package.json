@@ -55,7 +55,7 @@
     "prettier": "^3.9.1"
   },
   "dependencies": {
-    "prettier": "^3.9.1"
+    "prettier": "^3.9.4"
   },
   "devDependencies": {
     "npm-run-all2": "^9.0.2",
@@ -64,6 +64,6 @@
   },
   "engines": {
     "node": ">=24",
-    "pnpm": ">=9"
+    "pnpm": ">=9.15.9"
   }
 }

@@ -57,9 +57,9 @@
     "czg": "^1.13.1"
   },
   "dependencies": {
-    "@commitlint/cli": "^21.1.0",
-    "@commitlint/config-conventional": "^21.1.0",
-    "@commitlint/types": "^21.1.0",
+    "@commitlint/cli": "^21.2.0",
+    "@commitlint/config-conventional": "^21.2.0",
+    "@commitlint/types": "^21.2.0",
     "czg": "^1.13.1"
   },
   "devDependencies": {
@@ -69,6 +69,6 @@
   },
   "engines": {
     "node": ">=24",
-    "pnpm": ">=9"
+    "pnpm": ">=9.15.9"
   }
 }
