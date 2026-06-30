@@ -61,6 +61,90 @@ describe('writeProjectChangelog', () => {
     )
   })
 
+  it('prepends new content to an existing changelog section for the current day', () => {
+    const cwd = join(tmpdir(), `unconfig-changelog-same-day-${Date.now()}`)
+
+    mkdirSync(join(cwd, 'apps/document/content'), { recursive: true })
+    writeFileSync(
+      join(cwd, 'CHANGELOG.md'),
+      [
+        '# Changelog',
+        '',
+        '<!-- CHANGELOG:INSERT -->',
+        '',
+        '## 2026-06-29',
+        '',
+        '**@unconfig/example** `v0.9.0`',
+        '',
+        '- Existing release docs',
+        '',
+        '## 2026-06-28',
+        '',
+        '**@unconfig/example** `v0.8.0`',
+        '',
+        '- Previous release docs',
+        '',
+      ].join('\n'),
+    )
+
+    const didWrite = writeProjectChangelog({
+      cwd,
+      content: '**@unconfig/example** `v1.0.0`\n\n- Added release docs',
+      projectChangelogPath: 'CHANGELOG.md',
+      websiteChangelogPath: 'apps/document/content/changelog.md',
+    })
+
+    expect(didWrite).toBe(true)
+    expect(readFileSync(join(cwd, 'CHANGELOG.md'), 'utf8')).toBe(
+      [
+        '# Changelog',
+        '',
+        '<!-- CHANGELOG:INSERT -->',
+        '',
+        '## 2026-06-29',
+        '',
+        '**@unconfig/example** `v1.0.0`',
+        '',
+        '- Added release docs',
+        '',
+        '**@unconfig/example** `v0.9.0`',
+        '',
+        '- Existing release docs',
+        '',
+        '## 2026-06-28',
+        '',
+        '**@unconfig/example** `v0.8.0`',
+        '',
+        '- Previous release docs',
+        '',
+      ].join('\n'),
+    )
+    expect(
+      readFileSync(join(cwd, 'apps/document/content/changelog.md'), 'utf8'),
+    ).toBe(
+      [
+        '# Changelog',
+        '',
+        '## 2026-06-29',
+        '',
+        '**@unconfig/example** `v1.0.0`',
+        '',
+        '- Added release docs',
+        '',
+        '**@unconfig/example** `v0.9.0`',
+        '',
+        '- Existing release docs',
+        '',
+        '## 2026-06-28',
+        '',
+        '**@unconfig/example** `v0.8.0`',
+        '',
+        '- Previous release docs',
+        '',
+      ].join('\n'),
+    )
+  })
+
   it('skips writing when generated content is empty', () => {
     const cwd = join(tmpdir(), `unconfig-changelog-empty-${Date.now()}`)
 

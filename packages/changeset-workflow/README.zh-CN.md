@@ -80,7 +80,8 @@ const content = await generateProjectChangelog({
 
 ## Changelog 写入
 
-`writeProjectChangelog()` 会把内容插入 changelog marker 后方，并写入文档站 changelog。
+`writeProjectChangelog()` 会在当天日期块已存在时把新内容插入该日期块顶部，否则在 changelog
+marker 后方创建新的日期块。文档站 changelog 会同步写入，并移除 marker。
 
 ```ts
 await writeProjectChangelog({

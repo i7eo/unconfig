@@ -49,7 +49,7 @@
     "changeset:init": "pnpm exec changeset init",
     "changeset:generate": "changeset",
     "changeset:changelog": "tsx ./scripts/changesets/changelog-generate.ts",
-    "changeset:version": "changeset version && pnpm changeset:changelog",
+    "changeset:version": "pnpm changeset:changelog && changeset version",
     "changeset:publish": "changeset publish",
     "changeset:pre:alpha": "changeset pre enter alpha",
     "changeset:pre:beta": "changeset pre enter beta",

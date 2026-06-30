@@ -5,12 +5,14 @@ section: 'introduction'
 ---
 
 <!-- markdownlint-disable MD025 -->
+
 # `@unconfig` all changes
+
 <!-- markdownlint-enable MD025 -->
 
 <!-- CHANGELOG:INSERT -->
 
-## 29-06-2026
+## 2026-06-29
 
 **@unconfig/changeset-config** `v0.1.11`
 
@@ -54,24 +56,19 @@ section: 'introduction'
 
 **@unconfig/ts-config** `v0.1.11`
 
-- unified version
+- Breaking change; only the most basic configuration is retained.
 
 **@unconfig/utils** `v0.1.11`
 
 - unified version
 
-## 09-04-2026
-
-### 9:47:39 AM
+## 2026-04-09
 
 **@unconfig/ts-config-latest** `v0.0.1`
 
 - feat morden ts config
 
-
-## 01-07-2024
-
-### 7:50:38 AM
+## 2024-07-01
 
 **@unconfig/utils** `v0.1.10`
 
@@ -117,64 +114,31 @@ section: 'introduction'
 
 - Unified upgrade version
 
-
-## 27-06-2024
-
-### 11:06:30 AM
+## 2024-06-27
 
 **@unconfig/changeset-config** `v0.1.7`
 
 - refactor release creator
 
-
-## 27-06-2024
-
-### 10:38:41 AM
-
 **@unconfig/changeset-config** `v0.1.6`
 
 - test create release
-
-
-## 27-06-2024
-
-### 10:32:22 AM
 
 **@unconfig/changeset-config** `v0.1.5`
 
 - test create release
 
-
-## 27-06-2024
-
-### 10:26:45 AM
-
 **@unconfig/changeset-config** `v0.1.4`
 
 - add create release log
-
-
-## 27-06-2024
-
-### 10:17:28 AM
 
 **@unconfig/changeset-config** `v0.1.3`
 
 - fix auto create release logic
 
-
-## 27-06-2024
-
-### 9:53:32 AM
-
 **@unconfig/github** `v0.1.3`
 
 - add auth
-
-
-## 27-06-2024
-
-### 9:48:07 AM
 
 **@unconfig/ts-config** `v0.1.5`
 
@@ -216,11 +180,6 @@ section: 'introduction'
 
 - bump version
 
-
-## 27-06-2024
-
-### 9:26:05 AM
-
 **@unconfig/meta** `v0.1.1`
 
 - refactor every package
@@ -261,22 +220,17 @@ section: 'introduction'
 
 - refactor every package
 
-
-## 14-03-2023
+## 2023-03-14
 
 **@unconfig/ts-config** `v0.1.3`
 
 - add isolatedModules limit
 
-
-## 13-03-2023
+## 2023-03-13
 
 **@unconfig/ts-config** `v0.1.2`
 
 - export vitest.vue3.json
-
-
-## 13-03-2023
 
 **@unconfig/ts-config** `v0.1.1`
 
@@ -306,8 +260,7 @@ section: 'introduction'
 
 - update deps version and refactor tsconfig
 
-
-## 25-01-2023
+## 2023-01-25
 
 **@unconfig/ts-config** `v0.1.0`
 
@@ -340,4 +293,3 @@ section: 'introduction'
 **@unconfig/commitlint-config** `v0.1.0`
 
 - Setup version 0.1.0
-

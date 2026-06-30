@@ -38,6 +38,39 @@ function getCurrentDateHeading() {
   return `## ${year}-${month}-${day}`
 }
 
+function insertChangelogSection(changelog: string, content: string) {
+  const currentDateHeading = getCurrentDateHeading()
+  const releaseContent = content.trim()
+  const currentDateHeadingPattern = new RegExp(
+    `(^|\\n)${currentDateHeading.replaceAll('-', '\\-')}\\n`,
+  )
+  const currentDateHeadingMatch = currentDateHeadingPattern.exec(changelog)
+
+  if (
+    !currentDateHeadingMatch ||
+    typeof currentDateHeadingMatch.index !== 'number'
+  ) {
+    const section = normalizeMarkdownSpacing(
+      [currentDateHeading, '', releaseContent].join('\n'),
+    )
+
+    return changelog.replace(
+      CHANGELOG_INSERT_MARKER,
+      `${CHANGELOG_INSERT_MARKER}\n\n${section.trim()}`,
+    )
+  }
+
+  const insertIndex =
+    currentDateHeadingMatch.index + currentDateHeadingMatch[0].length
+  const previousContent = changelog.slice(0, insertIndex)
+  const nextContent = changelog.slice(insertIndex).trimStart()
+  const sectionContent = normalizeMarkdownSpacing(
+    [releaseContent, '', nextContent].join('\n'),
+  )
+
+  return `${previousContent}\n${sectionContent.trim()}\n`
+}
+
 export function writeProjectChangelog(options: WriteProjectChangelogOptions) {
   const { cwd, content, projectChangelogPath, websiteChangelogPath } = options
 
@@ -57,13 +90,7 @@ export function writeProjectChangelog(options: WriteProjectChangelogOptions) {
     )
   }
 
-  const section = normalizeMarkdownSpacing(
-    [getCurrentDateHeading(), '', content.trim()].join('\n'),
-  )
-  const nextChangelog = changelog.replace(
-    CHANGELOG_INSERT_MARKER,
-    `${CHANGELOG_INSERT_MARKER}\n\n${section.trim()}`,
-  )
+  const nextChangelog = insertChangelogSection(changelog, content)
 
   writeFileSync(changelogPath, nextChangelog)
   writeFileSync(

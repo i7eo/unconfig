@@ -92,8 +92,10 @@ with a lightweight release-plan object.
 
 ## Changelog Writing
 
-`writeProjectChangelog()` inserts content after the changelog marker and writes
-the mirrored documentation changelog.
+`writeProjectChangelog()` inserts content into the current date section when it
+already exists, otherwise it creates a new date section after the changelog
+marker. The newest content for a day is placed first, and the mirrored
+documentation changelog is written without the marker.
 
 ```ts
 await writeProjectChangelog({
