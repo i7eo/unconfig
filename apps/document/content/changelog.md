@@ -10,6 +10,12 @@ section: 'introduction'
 
 <!-- markdownlint-enable MD025 -->
 
+## 2026-06-30
+
+**@unconfig/changeset-workflow** `v0.0.3`
+
+- Update changelog writing to reuse the current date section and prepend same-day releases instead of creating duplicate date headings.
+
 ## 2026-06-29
 
 **@unconfig/changeset-config** `v0.1.11`
@@ -54,7 +60,7 @@ section: 'introduction'
 
 **@unconfig/ts-config** `v0.1.11`
 
-- - Breaking change; only the most basic configuration is retained.
+- Breaking change; only the most basic configuration is retained.
 
 **@unconfig/utils** `v0.1.11`
 
