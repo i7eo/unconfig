@@ -1,5 +1,12 @@
 # @unconfig/changeset-workflow
 
+## 0.0.3
+### Patch Changes
+
+
+
+- [`f5ccd4a`](https://github.com/i7eo/unconfig/commit/f5ccd4a0d9db0feded1d7e8226b82963abbe7512) Thanks [@i7eo](https://github.com/i7eo)! - Update changelog writing to reuse the current date section and prepend same-day releases instead of creating duplicate date headings.
+
 ## 0.0.2
 ### Patch Changes
 

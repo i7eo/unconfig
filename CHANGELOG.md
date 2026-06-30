@@ -12,6 +12,12 @@ section: 'introduction'
 
 <!-- CHANGELOG:INSERT -->
 
+## 2026-06-30
+
+**@unconfig/changeset-workflow** `v0.0.3`
+
+- Update changelog writing to reuse the current date section and prepend same-day releases instead of creating duplicate date headings.
+
 ## 2026-06-29
 
 **@unconfig/changeset-config** `v0.1.11`
