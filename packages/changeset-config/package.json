@@ -56,28 +56,28 @@
   },
   "dependencies": {
     "@changesets/assemble-release-plan": "^6.0.10",
-    "@changesets/cli": "^2.31.0",
+    "@changesets/cli": "^2.31.1",
     "@changesets/config": "^3.1.4",
     "@changesets/pre": "^2.0.2",
     "@changesets/read": "^0.6.7",
     "@changesets/types": "^6.1.0",
     "@manypkg/get-packages": "^3.1.0",
-    "@octokit/core": "^7.0.6",
+    "@octokit/core": "^7.0.8",
     "@types/inquirer": "^9.0.10",
-    "@types/semver": "^7.7.1",
+    "@types/semver": "^7.8.0",
     "@unconfig/meta": "workspace:*",
     "changesets-format-with-issue-links": "^0.3.0",
-    "inquirer": "^14.0.2",
-    "prettier": "^3.9.1",
+    "inquirer": "^14.2.2",
+    "prettier": "^3.9.6",
     "semver": "^7.8.5"
   },
   "devDependencies": {
-    "npm-run-all2": "^9.0.2",
+    "npm-run-all2": "^9.0.3",
     "rimraf": "^6.1.3",
-    "tsdown": "^0.22.3"
+    "tsdown": "^0.23.0"
   },
   "engines": {
     "node": ">=24",
-    "pnpm": ">=9"
+    "pnpm": ">=9.15.9"
   }
 }
